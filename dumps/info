@@ -1,0 +1,30 @@
+// http://XXX.XXX.XXX.XXX/info?at=XXX
+
+{
+    "XC_SUC": {
+        "name": "MiniSafe2",
+        "mhv": "XN II",
+        "mfv": "1.4.5-f82d000",
+        "msv": "1.24.0",
+        "hwv": "AA",
+        "vid": "0000",
+        "mem": 100001,
+        "ip": "192.168.178.123",
+        "sn": "255.255.255.0",
+        "gw": "192.168.178.1",
+        "dns": "192.168.178.1",
+        "mac": "aa-bb-cc-dd-ee-ff",
+        "ntp": "1.2.3.4",
+        "start": 1688972904,
+        "time": 1699476103,
+        "loc": "12345D0087",
+        "serial": "12345,8N1",
+        "io": "AA-AA",
+        "cfg": "BB",
+        "server": "m1.cloud.eltako.com:80",
+        "locked": false,
+        "sid": "123451234512345123451234512345",
+        "wifi": "MY WLAN",
+        "rssi": -39
+    }
+}

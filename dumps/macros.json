@@ -1,0 +1,12 @@
+// http://XXX.XXX.XXX.XXX/file/config/iqpro/macros.json?at=XXX
+
+{
+    "groups": [
+        {
+            "index": 1,
+            "macros": [],
+            "name": "Gruppe",
+            "classid": "group"
+        }
+    ]
+}

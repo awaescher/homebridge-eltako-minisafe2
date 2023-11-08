@@ -1,0 +1,70 @@
+// http://XXX.XXX.XXX.XXX/cmd?XC_FNC=GetStates&at=XXX
+
+{
+    "XC_SUC": [
+        {
+            "type": "ENOCEAN",
+            "sid": "01",
+            "adr": "ABC",
+            "deviceProtocol": "normal",
+            "senderID": "ABC",
+            "virtual": false,
+            "data": "eltako_blind",
+            "state": {
+                "rssiPercentage": 100,
+                "pos": 100,
+                "sync": true,
+                "rv": 200,
+                "rt": 50,
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "13",
+            "adr": "ABC",
+            "deviceProtocol": "normal",
+            "senderID": "ABC",
+            "virtual": false,
+            "data": "eltako_switch",
+            "state": {
+                "rssiPercentage": 100,
+                "state": "off",
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "13",
+            "adr": "ABC",
+            "deviceProtocol": "normal",
+            "senderID": "ABC",
+            "virtual": false,
+            "data": "eltako_switch",
+            "state": {
+                "rssiPercentage": 100,
+                "state": "off",
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "45",
+            "adr": "ABC",
+            "deviceProtocol": "normal",
+            "virtual": false,
+            "data": "eltako_weather",
+            "state": {
+                "rssiPercentage": 33,
+                "timeout": false,
+                "illumination": 0.0,
+                "temperature": -1.5,
+                "wind": 0.0,
+                "rain_state": false,
+                "s1": 0.0,
+                "s2": 0.0,
+                "s3": 0.0
+            }
+        }
+    ]
+}

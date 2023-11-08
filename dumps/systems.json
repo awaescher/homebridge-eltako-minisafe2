@@ -1,0 +1,116 @@
+// http://XXX.XXX.XXX.XXX/file/config/iqpro/systems.json?at=XXX
+
+{
+    "rooms": [
+        {
+            "name": "PCT14 Geräte",
+            "type": "other",
+            "_pctImport": true,
+            "index": 1
+        },
+        {
+            "name": "Wohnbereich",
+            "type": "livingroom",
+            "index": 2
+        },
+        {
+            "name": "Küche",
+            "type": "kitchen",
+            "index": 3
+        }
+    ],
+    "devices": [
+        {
+            "name": "Jalousie 1",
+            "room": 2,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_blind",
+                "vendor": "eltako",
+                "address": "FFFFFFFF",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFFAFAFAF",
+                "sid": "01",
+                "_target": "blind"
+            },
+            "index": 1,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Licht 1",
+            "room": 1,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_switch",
+                "vendor": "eltako",
+                "address": "FFF11111",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFFAF123",
+                "sid": "13",
+                "_target": "light"
+            },
+            "index": 2,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Eltako Wetterstation",
+            "room": 1,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_weather",
+                "vendor": "eltako",
+                "address": "FA123DDD",
+                "gateway": 1,
+                "virtual": false,
+                "deviceText": "FW123-24V DC",
+                "br": 61,
+                "sid": "45",
+                "_target": "weatherstation"
+            },
+            "index": 3,
+            "cloud": {
+                "enabled": true
+            }
+        }
+    ],
+    "gateways": [
+        {
+            "name": "MiniSafe2",
+            "index": 1,
+            "info": {
+                "ip": "192.168.123.123",
+                "mac": "aa-bb-cc-dd-ee-ff",
+                "hwv": "C2",
+                "vid": "000A",
+                "sys": "aio",
+                "name": "MiniSafe2",
+                "server": "m1.cloud.eltako.com:80",
+                "version": "AA",
+                "gateway_vendor": "mediola",
+                "password": "superunsecure",
+                "firmware": "1.24.0",
+                "sid": "1234512345123451234512345",
+                "_token": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "_cloudAccessActive": true,
+                "_primary": true,
+                "_rcs": false
+            }
+        }
+    ],
+    "qrcodes": [],
+    "actionlists": [],
+    "schedules": [],
+    "actions": []
+}
