@@ -1,16 +1,16 @@
 {
   "private": true,
-  "displayName": "Plugin Name",
-  "name": "homebridge-plugin-name",
+  "displayName": "Homebridge Eltako (MiniSafe2)",
+  "name": "homebridge-eltako",
   "version": "1.0.0",
-  "description": "A short description about what your plugin does.",
+  "description": "A Homebridge plugin to connect local Eltako installations to HomeKit. Requires a MiniSafe2.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME.git"
+    "url": "https://github.com/awaescher/homebridge-eltako"
   },
   "bugs": {
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME/issues"
+    "url": "https://github.com/awaescher/homebridge-eltako/issues"
   },
   "engines": {
     "node": "^18.17.0 || ^20.9.0",
