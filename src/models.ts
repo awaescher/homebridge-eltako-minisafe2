@@ -1,36 +1,36 @@
-export interface DeviceState {
-    rssiPercentage?: number;
-    pos?: number;
-    sync?: boolean;
-    rv?: number;
-    rt?: number;
-    lock?: boolean;
-    type?: string;
-    timeout?: boolean;
-    illumination?: number;
-    temperature?: number;
-    wind?: number;
-    rain_state?: boolean;
-    s1?: number;
-    s2?: number;
-    s3?: number;
-    state?: string;
-  }
+export class DeviceState {
+  rssiPercentage?: number;
+  pos?: number;
+  sync?: boolean;
+  rv?: number;
+  rt?: number;
+  lock?: boolean;
+  type?: string;
+  timeout?: boolean;
+  illumination?: number;
+  temperature?: number;
+  wind?: number;
+  rain_state?: boolean;
+  s1?: number;
+  s2?: number;
+  s3?: number;
+  state?: string;
+}
 
 export interface Device {
-    type: string;
-    sid: string;
-    adr: string;
-    deviceProtocol: string;
-    senderID?: string;
-    virtual: boolean;
-    data: string;
-    state: DeviceState;
-  }
+  type: string;
+  sid: string;
+  adr: string;
+  deviceProtocol: string;
+  senderID?: string;
+  virtual: boolean;
+  data: string;
+  state: DeviceState;
+}
 
 export interface DeviceResponse {
-    XC_SUC: Device[];
-  }
+  XC_SUC: Device[];
+}
 
 
 export interface Room {

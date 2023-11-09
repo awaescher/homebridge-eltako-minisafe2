@@ -1,15 +1,27 @@
 {
-  "pluginAlias": "homebridge-eltako",
+  "pluginAlias": "Homebridge Eltako for MiniSafe2",
   "pluginType": "platform",
   "singular": true,
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
+      "ip": {
+        "title": "IP address of the MiniSafe2 in your local network.",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "placeholder": "192.168.1.1"
+      },
+      "password": {
+        "title": "The password to access the MiniSafe2 (can be left empty if an access token is used)",
+        "type": "string",
+        "required": false,
+        "default": ""
+      },
+      "accessToken": {
+        "title": "The access token to access the MiniSafe2 (only required if no password is used)",
+        "type": "string",
+        "required": false,
+        "default": ""
       }
     }
   }
