@@ -123,8 +123,8 @@ export interface SystemConfig {
   rooms: Room[];
   devices: Device[];
   gateways: Gateway[];
-  qrcodes: any[];
-  actionlists: any[];
-  schedules: any[];
-  actions: any[];
+  qrcodes: string[];
+  actionlists: string[];
+  schedules: string[];
+  actions: string[];
 }
