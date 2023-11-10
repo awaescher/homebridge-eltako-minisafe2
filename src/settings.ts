@@ -6,4 +6,4 @@ export const PLATFORM_NAME = 'Homebridge Eltako for MiniSafe2';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-eltako';
+export const PLUGIN_NAME = 'homebridge-eltako-minisafe2';
