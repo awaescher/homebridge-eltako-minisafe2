@@ -56,10 +56,6 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
   getCurrentPosition(): CharacteristicValue {
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
 
-    if (this.accessory.context.device.info.sid === '0D'){
-      this.platform.log.info(`${this.accessory.context.device.info.sid} has ${state?.state?.pos}`);
-    }
-
     const value = state?.state?.pos ?? 0;
     const eltakoValue = this.transformToEltako(value);
 

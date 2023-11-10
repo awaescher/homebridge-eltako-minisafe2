@@ -56,7 +56,8 @@ export class MiniSafe2Api {
     };
 
     const url = this.buildUrl('/cmd');
-    const res = await axios.post(url, payload);
+    await axios.post(url, payload);
+
     console.log(payload);
   }
 
