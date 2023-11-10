@@ -1,5 +1,4 @@
 {
-  "private": true,
   "displayName": "Homebridge Eltako for MiniSafe2",
   "name": "homebridge-eltako-minisafe2",
   "version": "2.0.0",
