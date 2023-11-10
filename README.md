@@ -4,7 +4,7 @@
 
 </p>
 
-# Homebridge Eltako for MiniSafe2
+# Homebridge Eltako Plugin for MiniSafe2
 
 This plugin adds the devices from your [Eltako MiniSafe2](https://www.eltako.com/en/product/professional-smart-home-en/controllers-and-gateways-enocean-zigbee-knx-dali-mqtt-and-much-more/minisafe2/) to Apple HomeKit.
 
