@@ -1,17 +1,18 @@
 import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
 import { EltakoMiniSafe2Platform } from './platform';
+import { IUpdatableAccessory } from './IUpdatableAccessory';
 
 /**
  * Platform Accessory
  * An instance of this class is created for each accessory your platform registers
  * Each accessory may expose multiple services of different service types.
  */
-export class EltakoSwitchAccessory {
+export class EltakoSwitchAccessory implements IUpdatableAccessory {
   private service: Service;
 
   constructor(
     private readonly platform: EltakoMiniSafe2Platform,
-    private readonly accessory: PlatformAccessory,
+    public readonly accessory: PlatformAccessory,
   ) {
 
     // set accessory information
@@ -88,11 +89,10 @@ export class EltakoSwitchAccessory {
    * These are sent when the user changes the state of an accessory, for example, turning on a Light bulb.
    */
   async setOn(value: CharacteristicValue) {
-    this.platform.log.debug('Set ' + this.accessory.context.device.info.sid + ' Characteristic On ->', value);
+    this.platform.log.info('Set ' + this.accessory.context.device.info.sid + ' Characteristic On ->', value);
 
-    await this.platform.miniSafe.setState(this.accessory.context.device.info.sid, 'on');
-
-
+    // valid commands: 'on' 'off' 'toggle'
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, value ? 'on' : 'off');
   }
 
   /**
@@ -113,11 +113,6 @@ export class EltakoSwitchAccessory {
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
     const isOn = state?.state?.state === 'on';
 
-    this.platform.log.debug('Get ' + this.accessory.context.device.info.sid + ' Characteristic On ->', isOn);
-
-    // if you need to return an error to show the device as "Not Responding" in the Home app:
-    // throw new this.platform.api.hap.HapStatusError(this.platform.api.hap.HAPStatus.SERVICE_COMMUNICATION_FAILURE);
-
     return isOn;
   }
 
@@ -131,5 +126,9 @@ export class EltakoSwitchAccessory {
 
   //   this.platform.log.debug('Set Characteristic Brightness -> ', value);
   // }
+
+  update() {
+    this.service.getCharacteristic(this.platform.Characteristic.On).updateValue(this.getOn());
+  }
 
 }

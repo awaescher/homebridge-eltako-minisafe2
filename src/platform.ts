@@ -5,6 +5,8 @@ import { EltakoSwitchAccessory } from './EltakoSwitchAccessory';
 import { EltakoBlindsAccessory } from './EltakoBlindsAccessory';
 import { MiniSafe2Api } from './MiniSafe2Api';
 import { Device } from './models';
+import { getChangedDeviceAddresses } from './StateChangeDetector';
+import { IUpdatableAccessory } from './IUpdatableAccessory';
 
 /**
  * HomebridgePlatform
@@ -17,6 +19,7 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
 
   // this is used to track restored cached accessories
   public readonly accessories: PlatformAccessory[] = [];
+  public readonly accessoryInstances: IUpdatableAccessory[] = [];
 
   public miniSafe!: MiniSafe2Api;
   public deviceStateCache: Device[] = [];
@@ -50,6 +53,9 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
       }
 
       while (this.miniSafe) {
+
+        await this.delay(2000);
+
         try {
           await this.updateDeviceStateCache();
         } catch (e) {
@@ -76,7 +82,27 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
 
   async updateDeviceStateCache() {
     this.log.info('Updating device state cache ...');
-    this.deviceStateCache = await this.miniSafe.getStates();
+
+    const oldCache = this.deviceStateCache;
+    const newCache = await this.miniSafe.getStates();
+
+    this.deviceStateCache = newCache;
+
+    // find the changed devices and force them to update
+    const changedAddresses = getChangedDeviceAddresses(oldCache, newCache);
+
+    for (const changedAddress of changedAddresses) {
+
+      this.log.info(`Device ${changedAddress} did change`);
+
+      const uuid = this.api.hap.uuid.generate(changedAddress);
+      const existingAccessory = this.accessoryInstances.find(accessory => accessory.accessory.UUID === uuid);
+
+      if (existingAccessory) {
+        this.log.info(`Forcing update ${existingAccessory.accessory.displayName}`);
+        existingAccessory.update();
+      }
+    }
   }
 
   /**
@@ -133,13 +159,16 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
 
         // create the accessory handler for the restored accessory
         // this is imported from `platformAccessory.ts`
+
+        let instance: IUpdatableAccessory | null = null;
+
         switch (deviceType) {
           case 'eltako_blind': {
-            new EltakoBlindsAccessory(this, existingAccessory);
+            instance = new EltakoBlindsAccessory(this, existingAccessory);
             break;
           }
           case 'eltako_switch': {
-            new EltakoSwitchAccessory(this, existingAccessory);
+            instance = new EltakoSwitchAccessory(this, existingAccessory);
             break;
           }
           case 'eltako_weather': {
@@ -147,6 +176,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             //break;
             continue;
           }
+        }
+
+        if (instance) {
+          this.accessoryInstances.push(instance);
         }
 
         // the accessory already exists
@@ -164,15 +197,17 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         // the `context` property can be used to store any data about the accessory you may need
         accessory.context.device = device;
 
+        let instance: IUpdatableAccessory | null = null;
+
         // create the accessory handler for the newly create accessory
         // this is imported from `platformAccessory.ts`
         switch (deviceType) {
           case 'eltako_blind': {
-            new EltakoBlindsAccessory(this, accessory);
+            instance = new EltakoBlindsAccessory(this, accessory);
             break;
           }
           case 'eltako_switch': {
-            new EltakoSwitchAccessory(this, accessory);
+            instance = new EltakoSwitchAccessory(this, accessory);
             break;
           }
           case 'eltako_weather': {
@@ -182,6 +217,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           }
         }
 
+        if (instance) {
+          this.accessoryInstances.push(instance);
+        }
+
         // the accessory does not yet exist, so we need to create it
         this.log.info('Adding new accessory:', device.name);
 
@@ -189,5 +228,9 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         this.api.registerPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [accessory]);
       }
     }
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }

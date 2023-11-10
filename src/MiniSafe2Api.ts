@@ -1,4 +1,4 @@
-import { GatewayDetailInfo, SystemConfig, DeviceResponse, Device, DeviceState } from './models';
+import { GatewayDetailInfo, SystemConfig, DeviceResponse, Device } from './models';
 
 import axios from 'axios';
 
@@ -43,7 +43,7 @@ export class MiniSafe2Api {
   }
 
 
-  async setState(sid: string, state: string) {
+  async sendGenericCommand(sid: string, command: string) {
 
     const payload =
     {
@@ -51,13 +51,13 @@ export class MiniSafe2Api {
       id: sid,
       data:
       {
-        cmd: 'toggle',
+        cmd: `${command}`,
       },
     };
 
     const url = this.buildUrl('/cmd');
     const res = await axios.post(url, payload);
-    console.log(res);
+    console.log(payload);
   }
 
   buildUrl(route: string) {

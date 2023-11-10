@@ -1,17 +1,18 @@
 import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
 import { EltakoMiniSafe2Platform } from './platform';
+import { IUpdatableAccessory } from './IUpdatableAccessory';
 
 /**
  * Platform Accessory
  * An instance of this class is created for each accessory your platform registers
  * Each accessory may expose multiple services of different service types.
  */
-export class EltakoBlindsAccessory {
+export class EltakoBlindsAccessory implements IUpdatableAccessory {
   private service: Service;
 
   constructor(
     private readonly platform: EltakoMiniSafe2Platform,
-    private readonly accessory: PlatformAccessory,
+    public readonly accessory: PlatformAccessory,
   ) {
 
     // set accessory information
@@ -36,68 +37,68 @@ export class EltakoBlindsAccessory {
       .onGet(this.getCurrentPosition.bind(this));               // GET - bind to the `getOn` method below
 
     // register handlers for the On/Off Characteristic
-    this.service.getCharacteristic(this.platform.Characteristic.PositionState)
-      .onSet(this.setPositionState.bind(this))                // SET - bind to the `setOn` method below
-      .onGet(this.getPositionState.bind(this));               // GET - bind to the `getOn` method below
-
-    // register handlers for the On/Off Characteristic
     this.service.getCharacteristic(this.platform.Characteristic.TargetPosition)
       .onSet(this.setTargetPosition.bind(this))                // SET - bind to the `setOn` method below
       .onGet(this.getTargetPosition.bind(this));               // GET - bind to the `getOn` method below
 
+    // register handlers for the On/Off Characteristic
+    this.service.getCharacteristic(this.platform.Characteristic.PositionState)
+      .onSet(this.setPositionState.bind(this))                // SET - bind to the `setOn` method below
+      .onGet(this.getPositionState.bind(this));               // GET - bind to the `getOn` method below
   }
 
   async setCurrentPosition(value: CharacteristicValue) {
-    this.platform.log.debug('Set ' + this.accessory.context.device.info.sid + ' Characteristic Current Position ->', value);
+    const eltakoValue = this.transformToEltako(value);
+    this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Current Position ${value} (Eltako ${eltakoValue})`);
     //await this.platform.miniSafe.setState(this.accessory.context.device.info.sid, 'on');
   }
 
   getCurrentPosition(): CharacteristicValue {
-
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
-    console.log(state);
-    const position = state?.state?.pos ?? 0;
 
-    this.platform.log.debug('Get ' + this.accessory.context.device.info.sid + ' Characteristic Current Position ->', position);
+    if (this.accessory.context.device.info.sid === '0D'){
+      this.platform.log.info(`${this.accessory.context.device.info.sid} has ${state?.state?.pos}`);
+    }
 
-    return position;
+    const value = state?.state?.pos ?? 0;
+    const eltakoValue = this.transformToEltako(value);
+
+    return eltakoValue;
   }
 
+  async setTargetPosition(value: CharacteristicValue) {
+    const eltakoValue = this.transformToEltako(value);
+    this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Target Position ${value} (Eltako ${eltakoValue})`);
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, `moveTo${eltakoValue}`);
+  }
+
+  getTargetPosition(): CharacteristicValue {
+    const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
+    const value = state?.state?.pos ?? 0;
+    const eltakoValue = this.transformToEltako(value);
+    return eltakoValue;
+  }
 
   async setPositionState(value: CharacteristicValue) {
-    this.platform.log.debug('Set ' + this.accessory.context.device.info.sid + ' Characteristic Position State ->', value);
+    this.platform.log.debug('Set ' + this.accessory.context.device.info.sid + ' Position State ->', value);
     //await this.platform.miniSafe.setState(this.accessory.context.device.info.sid, 'on');
   }
 
   getPositionState(): CharacteristicValue {
-
-    // DECREASING	Characteristic.PositionState.DECREASING	0
-    // INCREASING	Characteristic.PositionState.INCREASING	1
-    // STOPPED	Characteristic.PositionState.STOPPED	2
-
-    const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
-    console.log(state);
-    const position = state?.state?.pos ?? 0;
-
-    this.platform.log.debug('Get ' + this.accessory.context.device.info.sid + ' Characteristic Position State ->', position);
-
-    return position;
+    // Characteristic.PositionState.DECREASING	0
+    // Characteristic.PositionState.INCREASING	1
+    // Characteristic.PositionState.STOPPED	2
+    return this.platform.Characteristic.PositionState.STOPPED;
   }
 
-
-  async setTargetPosition(value: CharacteristicValue) {
-    this.platform.log.debug('Set ' + this.accessory.context.device.info.sid + ' Characteristic Target Position ->', value);
-    //await this.platform.miniSafe.setState(this.accessory.context.device.info.sid, 'on');
+  update() {
+    this.service.getCharacteristic(this.platform.Characteristic.CurrentPosition).updateValue(this.getCurrentPosition());
+    this.service.getCharacteristic(this.platform.Characteristic.TargetPosition).updateValue(this.getTargetPosition());
+    this.service.getCharacteristic(this.platform.Characteristic.PositionState).updateValue(this.getPositionState());
   }
 
-  getTargetPosition(): CharacteristicValue {
-
-    const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
-    console.log(state);
-    const position = state?.state?.pos ?? 0;
-
-    this.platform.log.debug('Get ' + this.accessory.context.device.info.sid + ' Characteristic Target Position ->', position);
-
-    return position;
+  transformToEltako(value: CharacteristicValue) : number {
+    // 10% open in Homebridge means 90% open in Eltako
+    return 100 - Number(value);
   }
 }

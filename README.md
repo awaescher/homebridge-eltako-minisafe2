@@ -189,3 +189,6 @@ For reference, the current criteria are:
 ### Useful Links
 Note these links are here for help but are not supported/verified by the Homebridge team
 - [Custom Characteristics](https://github.com/homebridge/homebridge-plugin-template/issues/20)
+
+# Limitations
+ - Blinds won't report and progress while changing, it's just the end position as soon as it is reached
