@@ -31,7 +31,7 @@ Right now, the following devices are supported:
 |Switch|Switch/Lightbulb|HomeKit service depending on the devices `target`
 |Blind|Window Covering||
 
-I don't have any other devices to test. Donations welcome :)
+I don't have any other devices to test. Donations welcome 😉
 
 # Limitations
 
