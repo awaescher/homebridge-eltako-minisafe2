@@ -9,7 +9,7 @@
 This plugin adds the devices from your [Eltako MiniSafe2](https://www.eltako.com/en/product/professional-smart-home-en/controllers-and-gateways-enocean-zigbee-knx-dali-mqtt-and-much-more/minisafe2/) to Apple HomeKit.
 
 ![GFA5 app and the Eltako MiniSafe2](docs/GFA5+MiniSafe2.png)
- Image by [Eltako GmbH](https://www.eltako.com/)
+Image by [Eltako GmbH](https://www.eltako.com/)
 
 # Requirements
 
@@ -26,20 +26,28 @@ If you don't have a MiniSafe2 in your network, this plugin won't be able to cont
 
 Right now, the following devices are supported:
 
- - Switches (shown as switch or light depending on the `target`)
- - Blinds
+|Device|HomeKit service|Comment
+|-|-|-|
+|Switch|Switch/Lightbulb|HomeKit service depending on the devices `target`
+|Blind|Window Covering||
 
- I don't have any other devices to test. Donations welcome :)
+I don't have any other devices to test. Donations welcome :)
 
 # Limitations
 
- - The MiniSafe2 does not support change notifications, that's why values have to be polled regularly. Also, the MiniSafe2 does not allow to poll the state of specific devices but returns the state of every single device in your home. These polls can get really huge and take up to a few seconds, which leads to a small delay to recognize state changes from outside of HomeKit. The official GFA5 app is not faster, though.
- - Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
+## Constant polling
 
- # Disclaimer
+The MiniSafe2 does not support active change notifications, that's why values have to be polled regularly. In addition to this, the MiniSafe2 does not allow to poll the state of specific devices but returns the state of every single device for every poll. These polls can get really huge and take up to a few seconds, which leads to a small delay to recognize state changes from outside of HomeKit.
 
- This plugin brings inofficial HomeKit support for some Eltako devices. It is not affiliated with Eltako GmbH or any other person except myself.
- 
- Everything this plugin is able to do was reverse engineered. This way, this plugin will never support 100% of the devices and commands. Any help finding API resources is highly welcome.
- 
-  I wrote this plugin for fun, use it at your own risk.
+The official GFA5 app is not faster, though. According to the network traffic it causes, it has to rely on these heavy polls, too.
+
+## Uncommunicative devices 
+
+Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
+
+# Disclaimer
+This plugin brings inofficial HomeKit support for some Eltako devices. It is not affiliated with Eltako GmbH or any other person except myself.
+
+Everything this plugin is able to do was reverse engineered. This way, this plugin will never support 100% of the devices and commands. Any help finding API resources is highly welcome.
+
+I wrote this plugin for fun, use it at your own risk.
