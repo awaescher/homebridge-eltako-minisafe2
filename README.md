@@ -16,9 +16,10 @@ Image by [Eltako GmbH](https://www.eltako.com/)
 If you have your home setup up and running in the [Eltako GFA5](https://apps.apple.com/app/eltako-gfa5/id1555852467) app and you want to control your devices with Apple HomeKit, this is the right plugin for you.
 
 If you are not sure yet, here's what you need:
- - The devices you want to control need to be pre-teached
- - The devices you want to control need to be known to an [Eltako MiniSafe2](https://www.eltako.com/en/product/professional-smart-home-en/controllers-and-gateways-enocean-zigbee-knx-dali-mqtt-and-much-more/minisafe2/) in your local network.
-   - The plugin needs its IP address and the password to access it.
+ - The devices you want to control need to be calibrated
+ - The devices you want to control need to be known to an [Eltako MiniSafe2](https://www.eltako.com/en/product/professional-smart-home-en/controllers-and-gateways-enocean-zigbee-knx-dali-mqtt-and-much-more/minisafe2/) in your local network
+   - The home setup you are using in your GFA5 app has to be saved to the MiniSafe2 [(see here)](<docs/GFA5 Controller Settings.png>)
+- The plugin needs the HomeSafe2 [ip address](<docs/GFA5 Controller Settings.png>) and the password to access it
 
 If you don't have a MiniSafe2 in your network, this plugin won't be able to control any devices. Ask your electrician how to get a MiniSafe2 up and running in your environment.
 
@@ -28,11 +29,54 @@ Right now, the following devices are supported:
 
 |Device|Tag "data"|HomeKit service|Comment
 |-|-|-|-|
-|Switch|eltako_switch|Switch/Lightbulb|HomeKit service depending on the devices `target`
-|Blind|eltako_blind|Window Covering||
-|Weather|eltako_weather|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
+|Switch|`eltako_switch`|Switch/Lightbulb|HomeKit service depending on the devices `target`
+|Blind|`eltako_blind`|Window Covering||
+|Weather|`eltako_weather`|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
 
 I don't have any other devices to test. Donations welcome 😉
+
+# Endpoints
+
+I managed to reverse engineer some api endpoints the GFA5 app is using. The complete URL is always the IP address of the MiniSafe2, a route from the table below plus either the device password with &`XC_PASS=...` or an access token with `&at=...`. 
+
+Example:
+```
+http://192.168.178.123/cmd?XC_FNC=GetStates&XC_PASS=MyKillerPassword 
+```
+
+The GFA5 app is using the access token instead of the password. You can sniff your network traffic for the access token but I don't know how long it will be valid.
+
+|Route|Function|
+|-|-|
+|`/cmd?XC_FNC=GetStates`|All devices with their full state|
+|`/cmd?XC_FNC=GetSI`|Any kind of system data + location and weather data|
+|`/info`|Information about the MiniSafe2|
+|`/file/config/iqpro/systems.json`|The configuration saved on the MiniSafe2: All rooms, devices, tasks, etc.|
+|`/file/config/iqpro/config.json`|Unknown|
+|`/file/config/iqpro/macros.json`|Unknown, maybe scenes|
+
+The file and folder structure under `/file` can be explored by shortening the path accordingly. In this structure, I found some sound files too.
+
+You can control devices via `POST` to the `/cmd` endpoint with a json body like this:
+
+```
+{
+  "XC_FNC": "SendGenericCmd",
+  "id": "DEVICE-SID-FROM-SYSTEMS.JSON",
+  "data":
+  {
+    "cmd": `COMMAND`,
+  },
+};
+```
+
+For switches, the GFA5 app always sends the `toggle` command. However, `on` and `off` also work to send defined states. For shutters/blinds, the command `moveToXXX` can be sent, where XXX stands for the target position (0-100). These also support `up` and `down`.
+
+# Helping out
+
+Everything I know about the MiniSafe2 api comes entirely from reverse engineering. That way I can only provide the information that my setup delivers. This means that neither the API endpoints nor the parameters are complete. Please let me know if you find official resources or get answers from Eltako. 
+
+It would also be very helpful if you could provide me with data from your setups (anonymized of course, be careful with access tokens in the URLs). I could collect these next to [my dumps in this repository](https://github.com/awaescher/homebridge-eltako-minisafe2/tree/latest/dumps).
 
 # Limitations
 
@@ -47,6 +91,7 @@ The official GFA5 app is not faster, though. According to the network traffic it
 Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
 
 # Disclaimer
+
 This plugin brings inofficial HomeKit support for some Eltako devices. It is not affiliated with Eltako GmbH or any other person except myself.
 
 Everything this plugin is able to do was reverse engineered. This way, this plugin will never support 100% of the devices and commands. Any help finding API resources is highly welcome.
