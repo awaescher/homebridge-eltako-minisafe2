@@ -26,10 +26,11 @@ If you don't have a MiniSafe2 in your network, this plugin won't be able to cont
 
 Right now, the following devices are supported:
 
-|Device|HomeKit service|Comment
-|-|-|-|
-|Switch|Switch/Lightbulb|HomeKit service depending on the devices `target`
-|Blind|Window Covering||
+|Device|Tag "data"|HomeKit service|Comment
+|-|-|-|-|
+|Switch|eltako_switch|Switch/Lightbulb|HomeKit service depending on the devices `target`
+|Blind|eltako_blind|Window Covering||
+|Weather|eltako_weather|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
 
 I don't have any other devices to test. Donations welcome 😉
 
