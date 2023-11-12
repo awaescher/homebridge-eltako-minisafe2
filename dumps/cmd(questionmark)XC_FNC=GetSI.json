@@ -1,0 +1,63 @@
+// http://XXX.XXX.XXX.XXX/cmd?XC_FNC=GetSI&at=XXX
+
+{
+    "XC_SUC": {
+        "HWV": "C2",
+        "HWRV": "02",
+        "FWV": "1.24.1",
+        "BUILD": "0002",
+        "TZ": "21",
+        "TIME": "11:11:07 12.11.2023",
+        "LONG": "1111",
+        "LAT": "2222",
+        "RFM": "0D01",
+        "RFCAL": "00XX",
+        "PIN": "",
+        "rgb": {
+            "defaultColor": "02"
+        },
+        "DC": [
+            "0%",
+            "0%"
+        ],
+        "ststart": "09:08:24 10.07.2023",
+        "astro": {
+            "sunrise": "07:19",
+            "sunset": "16:20",
+            "dawn": "06:01",
+            "dusk": "17:38",
+            "noon": "11:50"
+        },
+        "HM": {
+            "ADR": "123123",
+            "KEY": ""
+        },
+        "EID": "",
+        "ER": {
+            "life": "3333333333333333333333333333333333333333333333333333333333330C",
+            "learning": "0",
+            "sysAdr": "1"
+        },
+        "ENOCEAN": {
+            "baseAdr": "345345",
+            "chipAdr": "345567",
+            "remainingBaseAdrChanges": 10,
+            "repeater": 0,
+            "txMode": 1
+        },
+        "HmIP": {
+            "ADR": "345234",
+            "SEQ": "00000000"
+        },
+        "log": {
+            "factoryReset": {
+                "time": "07:30:41 07.02.2036",
+                "reason": "01"
+            }
+        },
+        "S/N": "",
+        "udp": "16/53462",
+        "freeMemory": "94%",
+        "options": "0000000000000001"
+    }
+}
