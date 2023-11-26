@@ -1,0 +1,2362 @@
+MAP:{
+            "general":{
+                "f6-01-01": {
+                    "command":[
+                        {"type":"enum","name":"button","ref":{"value":"button","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-02-01": {
+                    "command":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-02-02": {
+                    "command":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-02-03": {
+                    "command":[
+                        {"type":"enum","name":"auto","ref":{"value":"auto"}},
+                        {"type":"enum","name":"manu","ref":{"value":"manu"}},
+                        {"type":"enum","name":"dimUp","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dimDown","ref":{"value":"dimDown"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["auto","manu","dimUp", "dimDown"]}}
+                    ]
+                },
+                "f6-02-04": {
+                    "status":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released"]}},
+                        {"type":"enum","name":"energy bow","ref":{"value":"energyBow","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"energy bow","ref":{"value":"energyBow","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-03-01": {
+                    "command":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-03-02": {
+                    "command":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","ext":"%e", "extMeta":["press","release","shortPress","longPress"]}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","options":["pressed","released"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CI","ref":{"value":"buttonCI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button CO","ref":{"value":"buttonCO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DI","ref":{"value":"buttonDI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button DO","ref":{"value":"buttonDO","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "f6-04-01": {
+                    "status":[
+                        {"type":"enum","name":"key card","ref":{"value":"keycard","options":["inserted","takeout"]}}
+                    ]
+                },
+                "f6-04-02": {
+                    "status":[
+                        {"type":"enum","name":"key card","ref":{"value":"keycard","options":["inserted","takeout"]}}
+                    ]
+                },
+                "f6-05-00": {
+                    "status":[
+                        {"type":"enum","name":"wind","ref":{"value":"wind","options":["alarm","ok"]}},
+                        {"type":"enum","name":"battery low","ref":{"value":"lowbat","options":["true","false"]}}
+                    ]
+                },
+                "f6-05-01": {
+                    "command":[
+                        {"type":"enum","name":"reset","ref":{"value":"reset"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"water","ref":{"value":"water","options":["alarm","ok"]}}
+                    ]
+                },
+                "f6-05-02": {
+                    "status":[
+                        {"type":"enum","name":"smoke","ref":{"value":"smoke","options":["alarm","ok"]}},
+                        {"type":"enum","name":"battery low","ref":{"value":"lowbat","options":["true","false"]}}
+                    ]
+                },
+                "f6-10-00": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "window", "states": ["open", "tilted"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed","tilted"]}},
+                        {"type":"enum","name":"handle position","ref":{"value":"handle_pos","options":["up","down","middle"]}},
+                        {"type":"int","name":"handle raw","ref":{"value":"handle_raw"}}
+                    ]
+                },
+                "f6-10-01": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "window", "states": ["open", "tilted"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed","tilted"]}},
+                        {"type":"enum","name":"handle position","ref":{"value":"handle_pos","options":["up","down","middle"]}},
+                        {"type":"int","name":"handle raw","ref":{"value":"handle_raw"}}
+                    ]
+                },
+                "d5-00-01": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "contact", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"contact","ref":{"value":"contact","options":["open","closed"]}},
+                        {"type":"int","name":"contact raw","ref":{"value":"contact_raw"}}
+                    ]
+                },
+                "a5-02-01": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-40-0"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-02": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-30-10"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-03": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-20"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-04": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-10-30"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-05": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-06": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"10-50"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-07": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-08": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"30-70"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-09": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"40-80"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-0a": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"50-90"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-0b": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"60-100"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-10": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-60-20"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-11": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-50-30"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-12": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-40-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-13": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-30-50"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-14": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-15": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-10-70"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-16": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-80"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-17": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"10-90"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-18": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"20-100"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-19": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"30-110"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-1a": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"40-120"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-1b": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"50-130"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-02-20": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-10-41.2"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-1023"}}
+                    ]
+                },
+                "a5-02-30": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-40-62.3"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-1023"}}
+                    ]
+                },
+                "a5-04-01": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-04-02": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-04-03": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-1023"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-06-01": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 1","ref":{"value":"illumination1", "extMeta":"600-60000"}},
+                        {"type":"int","name":"illumination 1 raw","ref":{"value":"illumination1_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 2","ref":{"value":"illumination2", "extMeta":"300-30000"}},
+                        {"type":"int","name":"illumination 2 raw","ref":{"value":"illumination2_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"300-60000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"range","ref":{"value":"range", "options":["db1", "db2"]}},
+                        {"type":"int","name":"range raw","ref":{"value":"range_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-06-02": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 1","ref":{"value":"illumination1", "extMeta":"0-1020"}},
+                        {"type":"int","name":"illumination 1 raw","ref":{"value":"illumination1_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 2","ref":{"value":"illumination2", "extMeta":"0-510"}},
+                        {"type":"int","name":"illumination 2 raw","ref":{"value":"illumination2_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1020"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"range","ref":{"value":"range", "options":["db1", "db2"]}},
+                        {"type":"int","name":"range raw","ref":{"value":"range_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-06-03": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-1000"}}
+                    ]
+                },
+                "a5-06-04": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"energy","ref":{"value":"energy", "extMeta":"0-100"}},
+                        {"type":"int","name":"energy raw","ref":{"value":"energy_raw", "extMeta":"0-15"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-65535"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-65535"}},
+                        {"type":"enum","name":"temperature available","ref":{"value":"temperature_avail", "options":["true", "true"]}},
+                        {"type":"enum","name":"energy available","ref":{"value":"energy_avail",  "options":["true", "true"]}}
+                    ]
+                },
+                "a5-06-05": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 1","ref":{"value":"illumination1", "extMeta":"0-10200"}},
+                        {"type":"int","name":"illumination 1 raw","ref":{"value":"illumination1_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination 2","ref":{"value":"illumination2", "extMeta":"0-5100"}},
+                        {"type":"int","name":"illumination 2 raw","ref":{"value":"illumination2_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-10200"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"range","ref":{"value":"range", "options":["db1", "db2"]}},
+                        {"type":"int","name":"range raw","ref":{"value":"range_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-07-01": {
+                    "command": [
+                        {"type":"enum","name":"reset","ref":{"value":"reset"}}
+                    ],
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state", "options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"voltage available","ref":{"value":"voltage_avail", "options":["true","false"]}}
+                    ]
+                },
+                "a5-07-02": {
+                    "command": [
+                        {"type":"enum","name":"reset","ref":{"value":"reset"}}
+                    ],
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state", "options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-07-03": {
+                    "command": [
+                        {"type":"enum","name":"reset","ref":{"value":"reset"}}
+                    ],
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-1000"}},
+                        {"type":"enum","name":"state","ref":{"value":"state", "options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-08-01": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination","extMeta":"0-510"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-51"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-08-02": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination","extMeta":"0-1020"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-51"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-08-03": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination","extMeta":"0-1530"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-30-50"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-09-02": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"gas","ref":{"value":"gas","extMeta":"0-1020"}},
+                        {"type":"int","name":"gas raw","ref":{"value":"gas_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-51"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"temperature available","ref":{"value":"temperature_available","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-04": {
+                    "status":[
+                        {"type":"float","name":"humidity","ref":{"value":"humidity","extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-200"}},
+                        {"type":"float","name":"gas","ref":{"value":"gas","extMeta":"0-2550"}},
+                        {"type":"int","name":"gas raw","ref":{"value":"gas_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-51"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"temperature available","ref":{"value":"temperature_available","options":["true","false"]}},
+                        {"type":"enum","name":"humidity available","ref":{"value":"humidity_available","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-05": {
+                    "status":[
+                        {"type":"float","name":"voc","ref":{"value":"voc","extMeta":"0-655350"}},
+                        {"type":"int","name":"voc raw","ref":{"value":"voc_raw", "extMeta":"0-65535"}},
+                        {"type":"enum","name":"voc id","ref":{"value":"voc_id", "options":["VOCT","Formaldehyde",
+                            "Benzene","Styrene","Toluene","Tetrachloroethylene","Xylene","n-Hexane","n-Octane",
+                            "Cyclopentane","Methanol","Ethanol","1-Pentanol","Acetone","ethylene Oxide",
+                            "Acetaldehyde ue","Acetic Acid","Propionice Acid","Valeric Acid","Butyric Acid",
+                            "Ammoniac","Hydrogen Sulfide","Dimethylsulfide","2-Butanol","2-Methylpropanol",
+                            "Diethyl ether","ozone"]}},
+                        {"type":"int","name":"voc id raw","ref":{"value":"voc_id_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"scale","ref":{"value":"scale"}}
+                    ]
+                },
+                "a5-09-06": {
+                    "status":[
+                        {"type":"int","name":"radon","ref":{"value":"radon","extMeta":"0-1023"}}
+                    ]
+                },
+                "a5-09-07": {
+                    "status":[
+                        {"type":"int","name":"pm 10","ref":{"value":"pm10","extMeta":"0-511"}},
+                        {"type":"int","name":"pm 2.5","ref":{"value":"pm25","extMeta":"0-511"}},
+                        {"type":"int","name":"pm 1","ref":{"value":"pm1","extMeta":"0-511"}},
+                        {"type":"enum","name":"pm 10 active","ref":{"value":"pm10_active","options":["true","false"]}},
+                        {"type":"enum","name":"pm 2.5 active","ref":{"value":"pm25_active","options":["true","false"]}},
+                        {"type":"enum","name":"pm 1 active","ref":{"value":"pm1_active","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-08": {
+                    "status":[
+                        {"type":"float","name":"co2","ref":{"value":"co2","extMeta":"0-2000"}},
+                        {"type":"int","name":"co2 raw","ref":{"value":"co2_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-09-09": {
+                    "status":[
+                        {"type":"float","name":"co2","ref":{"value":"co2","extMeta":"0-2000"}},
+                        {"type":"int","name":"co2 raw","ref":{"value":"co2_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"power failure detected","ref":{"value":"power_failure_detected","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-0a": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"2.0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-15"}},
+                        {"type":"int","name":"gas","ref":{"value":"gas","extMeta":"0-65535"}},
+                        {"type":"int","name":"gas raw","ref":{"value":"gas_raw", "extMeta":"0-65535"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"temperature available","ref":{"value":"temperature_available","options":["true","false"]}},
+                        {"type":"enum","name":"voltage available","ref":{"value":"voltage_available","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-0b": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"2.0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-15"}},
+                        {"type":"float","name":"radio","ref":{"value":"radio","extMeta":"0-6553"}},
+                        {"type":"int","name":"radio raw","ref":{"value":"radio_raw", "extMeta":"0-65535"}},
+                        {"type":"float","name":"scale","ref":{"value":"scale"}},
+                        {"type":"enum","name":"unit","ref":{"value":"unit", "options":["μSv/h","cpm","Bq/L","Bq/kg"]}},
+                        {"type":"int","name":"unit raw","ref":{"value":"unit_raw", "extMeta":"0-3"}},
+                        {"type":"enum","name":"temperature available","ref":{"value":"temperature_available","options":["true","false"]}},
+                        {"type":"enum","name":"voltage available","ref":{"value":"voltage_available","options":["true","false"]}}
+                    ]
+                },
+                "a5-09-0c": {
+                    "status":[
+                        {"type":"float","name":"voc","ref":{"value":"voc","extMeta":"0-655350"}},
+                        {"type":"int","name":"voc raw","ref":{"value":"voc_raw", "extMeta":"0-65535"}},
+                        {"type":"enum","name":"voc id","ref":{"value":"voc_id", "options":["VOCT","Formaldehyde",
+                            "Benzene","Styrene","Toluene","Tetrachloroethylene","Xylene","n-Hexane","n-Octane",
+                            "Cyclopentane","Methanol","Ethanol","1-Pentanol","Acetone","ethylene Oxide",
+                            "Acetaldehyde ue","Acetic Acid","Propionice Acid","Valeric Acid","Butyric Acid",
+                            "Ammoniac","Hydrogen Sulfide","Dimethylsulfide","2-Butanol","2-Methylpropanol",
+                            "Diethyl ether","Naphthalene","4-Phenylcyclohexene","Limonene","Trichloroethylene",
+                            "Isovaleric acid","Indole","Cadaverine","Putrescine","Caproic acid","ozone"]}},
+                        {"type":"int","name":"voc id raw","ref":{"value":"voc_id_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"scale","ref":{"value":"scale"}},
+                        {"type":"enum","name":"unit","ref":{"value":"unit", "options":["μSv/h","ppb"]}},
+                        {"type":"int","name":"unit raw","ref":{"value":"unit_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-01": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-02": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-03": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C", "extMeta":"0-40"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-10-04": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-10-05": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-06": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-07": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-10-08": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-09": {
+                    "status":[
+                        {"type":"enum","name":"fan speed","ref":{"value":"fan_speed","options":["0","1","2","3","auto"]}},
+                        {"type":"int","name":"fan speed raw","ref":{"value":"fan_speed_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-0a": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"contact","ref":{"value":"contact","options":["open","closed"]}},
+                        {"type":"int","name":"contact raw","ref":{"value":"contact_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-0b": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"contact","ref":{"value":"contact","options":["open","closed"]}},
+                        {"type":"int","name":"contact raw","ref":{"value":"contact_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-0c": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-0d": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-10": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"%"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-11": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"%"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-12": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint", "unit":"%"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "a5-10-13": {
+                    "status":[
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}},
+                        {"type":"int","name":"button raw","ref":{"value":"button_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-10-14": {
+                    "status":[
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"slider","ref":{"value":"slider","options":["day","night"]}},
+                        {"type":"int","name":"slider raw","ref":{"value":"slider_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-12-00": {
+                    "status":[
+                        {"type":"float","name":"current","ref":{"value":"current", "extMeta":"0-16777215"}},
+                        {"type":"float","name":"counter","ref":{"value":"counter", "extMeta":"0-16777215"}},
+                        {"type":"int","name":"channel","ref":{"value":"channel","extMeta":"0-15"}}
+                    ]
+                },
+                "a5-12-01": {
+                    "status":[
+                        {"type":"float","name":"power","ref":{"value":"power", "extMeta":"0-16777215"}},
+                        {"type":"float","name":"energy","ref":{"value":"energy", "extMeta":"0-16777215"}},
+                        {"type":"int","name":"tariff","ref":{"value":"tariff","extMeta":"0-15"}}
+                    ]
+                },
+                "a5-12-02": {
+                    "status":[
+                        {"type":"float","name":"flow","ref":{"value":"flow", "extMeta":"0-16777215"}},
+                        {"type":"float","name":"volume","ref":{"value":"volume", "extMeta":"0-16777215"}},
+                        {"type":"int","name":"tariff","ref":{"value":"tariff","extMeta":"0-15"}}
+                    ]
+                },
+                "a5-12-03": {
+                    "status":[
+                        {"type":"float","name":"flow","ref":{"value":"flow", "extMeta":"0-16777215"}},
+                        {"type":"float","name":"volume","ref":{"value":"volume", "extMeta":"0-16777215"}},
+                        {"type":"int","name":"tariff","ref":{"value":"tariff","extMeta":"0-15"}}
+                    ]
+                },
+                "a5-13-01": {
+                    "status":[
+                        {"type":"float","name":"lux","ref":{"value":"lux", "extMeta":"0-1000"}},
+                        {"type":"int","name":"lux raw","ref":{"value":"lux_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-40-80"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"wind","ref":{"value":"wind", "extMeta":"0-70"}},
+                        {"type":"int","name":"wind raw","ref":{"value":"wind_raw","extMeta":"0-255"}},
+                        {"type":"enum","name":"day/night","ref":{"value":"day_night","options":["day","night"]}},
+                        {"type":"enum","name":"rain","ref":{"value":"rain","options":["true","false"]}},
+                        {"type":"float","name":"sun west","ref":{"value":"sun_west", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun west raw","ref":{"value":"sun_west_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"sun south","ref":{"value":"sun_south", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun south raw","ref":{"value":"sun_south_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"sun east","ref":{"value":"sun_east", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun east raw","ref":{"value":"sun_east_raw","extMeta":"0-255"}},
+                        {"type":"enum","name":"hemisphere","ref":{"value":"hemisphere","options":["south","north"]}},
+                        {"type":"int","name":"day","ref":{"value":"day","extMeta":"1-31"}},
+                        {"type":"int","name":"month","ref":{"value":"month","extMeta":"1-12"}},
+                        {"type":"int","name":"year","ref":{"value":"year","extMeta":"2000-2099"}},
+                        {"type":"enum","name":"date source","ref":{"value":"date_src","options":["gps","rtc"]}},
+                        {"type":"int","name":"weekday","ref":{"value":"weekday","extMeta":"1-7"}},
+                        {"type":"int","name":"hour","ref":{"value":"hour","extMeta":"0-23"}},
+                        {"type":"int","name":"min","ref":{"value":"min", value_t: 'minute', "extMeta":"0-59"}},
+                        {"type":"int","name":"sec","ref":{"value":"sec","extMeta":"0-59"}},
+                        {"type":"enum","name":"time format","ref":{"value":"time_format","options":["12","24"]}},
+                        {"type":"enum","name":"am/pm","ref":{"value":"am_pm","options":["am","pm"]}},
+                        {"type":"enum","name":"time source","ref":{"value":"time_src","options":["gps","rtc"]}},
+                        {"type":"int","name":"elevation","ref":{"value":"elv","extMeta":"-90-90"}},
+                        {"type":"int","name":"azimuth","ref":{"value":"azm","extMeta":"0-359"}},
+                        {"type":"float","name":"latitude","ref":{"value":"latitude", "extMeta":"-90-90"}},
+                        {"type":"int","name":"latitude raw","ref":{"value":"latitude_raw","extMeta":"0-4095"}},
+                        {"type":"float","name":"longitude","ref":{"value":"longitude", "extMeta":"-180-180"}},
+                        {"type":"int","name":"longitude raw","ref":{"value":"longitude_raw","extMeta":"0-4095"}}
+                    ]
+                },
+                "a5-13-02": {
+                    "status":[
+                        {"type":"float","name":"sun west","ref":{"value":"sun_west", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun west raw","ref":{"value":"sun_west_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"sun south","ref":{"value":"sun_south", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun south raw","ref":{"value":"sun_south_raw","extMeta":"0-255"}},
+                        {"type":"float","name":"sun east","ref":{"value":"sun_east", "extMeta":"0-150"}},
+                        {"type":"int","name":"sun east raw","ref":{"value":"sun_east_raw","extMeta":"0-255"}},
+                        {"type":"enum","name":"hemisphere","ref":{"value":"hemisphere","options":["south","north"]}}
+                    ]
+                },
+                "a5-13-03": {
+                    "status":[
+                        {"type":"int","name":"day","ref":{"value":"day","extMeta":"1-31"}},
+                        {"type":"int","name":"month","ref":{"value":"month","extMeta":"1-12"}},
+                        {"type":"int","name":"year","ref":{"value":"year","extMeta":"2000-2099"}},
+                        {"type":"enum","name":"date source","ref":{"value":"date_src","options":["gps","rtc"]}}
+                    ]
+                },
+                "a5-13-04": {
+                    "status":[
+                        {"type":"int","name":"weekday","ref":{"value":"weekday","extMeta":"1-7"}},
+                        {"type":"int","name":"hour","ref":{"value":"hour","extMeta":"0-23"}},
+                        {"type":"int","name":"min","ref":{"value":"min", value_t: 'minute', "extMeta":"0-59"}},
+                        {"type":"int","name":"sec","ref":{"value":"sec","extMeta":"0-59"}},
+                        {"type":"enum","name":"time format","ref":{"value":"time_format","options":["12","24"]}},
+                        {"type":"enum","name":"am/pm","ref":{"value":"am_pm","options":["am","pm"]}},
+                        {"type":"enum","name":"time source","ref":{"value":"time_src","options":["gps","rtc"]}}
+                    ]
+                },
+                "a5-13-05": {
+                    "status":[
+                        {"type":"int","name":"elevation","ref":{"value":"elv","extMeta":"-90-90"}},
+                        {"type":"int","name":"azimuth","ref":{"value":"azm","extMeta":"0-359"}}
+                    ]
+                },
+                "a5-13-06": {
+                    "status":[
+                        {"type":"float","name":"latitude","ref":{"value":"latitude", "extMeta":"-90-90"}},
+                        {"type":"int","name":"latitude raw","ref":{"value":"latitude_raw","extMeta":"0-4095"}},
+                        {"type":"float","name":"longitude","ref":{"value":"longitude", "extMeta":"-180-180"}},
+                        {"type":"int","name":"longitude raw","ref":{"value":"longitude_raw","extMeta":"0-4095"}}
+                    ]
+                },
+                "a5-14-01": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]                               
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}}
+                    ]
+                },
+                "a5-14-02": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]
+                        }
+                    }, 
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}}
+                    ]
+                },
+                "a5-14-03": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-14-04": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]
+                        }
+                    }, 
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-14-05": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-14-06": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-14-07": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}},
+                        {"type":"enum","name":"lock","ref":{"value":"lock","options":["locked","unlocked"]}}
+                    ]
+                },
+                "a5-14-08": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open"]}]
+                        }
+                    }, 
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}},
+                        {"type":"enum","name":"lock","ref":{"value":"lock","options":["locked","unlocked"]}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-14-09": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open", "tilted"]}]
+                        }
+                    }, 
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed", "tilted"]}}
+                    ]
+                },
+                "a5-14-0a": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open", "tilted"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed", "tilted"]}},
+                        {"type":"enum","name":"vibration","ref":{"value":"viberation","options":["true","false"]}}
+                    ]
+                },
+                "a5-20-04": {
+                    "command":[
+                        {"type":"float","name":"set temprature","ref":{"value":"setTo", "ext":"%f", "extMeta":"10.0-30.0", "scale":"0.5", "unit":"°C"}},
+                        {"type":"int","name":"set valve","ref":{"value":"setValve",  "ext":"%d", "extMeta":"0-100"}},
+                        {"type":"float","name":"temprature up","ref":{"value":"up", value_t: 'tempUp', "ext":"%f", "extMeta":"0.5-5", "scale":"0.5", "unit":"°C"}},
+                        {"type":"float","name":"temprature down","ref":{"value":"down", value_t: 'tempDown', "ext":"%f", "extMeta":"0.5-5", "scale":"0.5", "unit":"°C"}},
+                        {"type":"enum","name":"temprature measure on","ref":{"value":"measureOn"}},
+                        {"type":"enum","name":"temprature measure off","ref":{"value":"measureOff"}},
+                        {"type":"enum","name":"lock button","ref":{"value":"buttonLock"}},
+                        {"type":"enum","name":"unlock button","ref":{"value":"buttonUnlock"}},
+                        {"type":"enum","name":"open valve","ref":{"value":"openValve"}},
+                        {"type":"enum","name":"close valve","ref":{"value":"closeValve"}},
+                        {"type":"enum","name":"init adaption","ref":{"value":"init"}},
+                        {"type":"enum","name":"set wakup cycle","ref":{"value":"setWakeup", "ext":"%e", "sort":"none","extMeta":[
+                            "10s","60s","90s","120s","150s","180s","210s","240s","270s","300s",
+                            "330s","360s","390s","420s","450s","480s","510s","540s","570s","600s",
+                            "630s","660s","690s","720s","750s","780s","810s","840s","870s","900s",
+                            "930s","960s","990s","1020s","1050s","1080s","1110s","1140s","1170s","1200s",
+                            "1230s","1260s","1290s","1320s","1350s","1380s","1410s","1440s","1470s","1500s",
+                            "3h","6h","9h","12h","15h","18h","21h","24h","27h","30h","33h","36h","39h","42h"
+                        ]}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"valve","ref":{"value":"valve", "extMeta":"0-100"}},
+                        {"type":"enum","name":"temprature measurement","ref":{"value":"measurement","options":["inactive","active"]}},
+                        {"type":"enum","name":"button lock","ref":{"value":"button_lock","options":["locked","unlocked"]}},
+                        {"type":"enum","name":"temperature selection","ref":{"value":"temperature_selection","options":["setpoint","feed_temperature"]}},
+                        {"type":"float","name":"feed temperature","ref":{"value":"feed_temperature", "extMeta":"20-80", "unit": "°C"}},
+                        {"type":"float","name":"set temperature","ref":{"value":"setpoint", "extMeta":"10-30", "unit":"°C"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"10-30", "unit":"°C"}},
+                        {"type":"enum","name":"error","ref":{"value":"error","options":["no_error","measurement_error", "battery_empty", "frost_protection",
+                            "blocked_valve","end_point_detection_error","no_valve","not_taught_in","no_response_from_controller","teach_in_error","unknown_error"]}},
+                        {"type":"enum","name":"wakeup cycle","ref":{"value":"wakeup_cycle","options":[
+                            "10s","60s","90s","120s","150s","180s","210s","240s","270s","300s",
+                            "330s","360s","390s","420s","450s","480s","510s","540s","570s","600s",
+                            "630s","660s","690s","720s","750s","780s","810s","840s","870s","900s",
+                            "930s","960s","990s","1020s","1050s","1080s","1110s","1140s","1170s","1200s",
+                            "1230s","1260s","1290s","1320s","1350s","1380s","1410s","1440s","1470s","1500s",
+                            "3h","6h","9h","12h","15h","18h","21h","24h","27h","30h","33h","36h","39h","42h"
+                        ]}},
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}}
+                    ]
+                },
+                "a5-30-01": {
+                    "status":[
+                        {"type":"enum","name":"battery low","ref":{"value":"battery_low", "options":["true","false"]}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "a5-30-02": {
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed"]}}
+                    ]
+                },
+                "a5-30-03": {
+                    "status":[
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"int","name":"wake","ref":{"value":"wake", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 3","ref":{"value":"input3", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 2","ref":{"value":"input2", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 1","ref":{"value":"input1", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 0","ref":{"value":"input0", "extMeta":"0-1"}}
+                    ]
+                },
+                "a5-30-04": {
+                    "status":[
+                        {"type":"int","name":"analog input","ref":{"value":"analog_input", "extMeta":"0-255"}},
+                        {"type":"int","name":"input 2","ref":{"value":"input2", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 1","ref":{"value":"input1", "extMeta":"0-1"}},
+                        {"type":"int","name":"input 0","ref":{"value":"input0", "extMeta":"0-1"}}
+                    ]
+                },
+                "d2-01-00": {
+                    "command": [
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"int","name":"output value","ref":{"value":"output_value", "extMeta":"0-100"}},
+                        {"type":"enum","name":"output state","ref":{"value":"output_state","options":["on","off"]}}
+                    ]
+                },
+                "d2-01-01": {
+                    "command": [
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"int","name":"output value","ref":{"value":"output_value", "extMeta":"0-100"}},
+                        {"type":"enum","name":"output state","ref":{"value":"output_state","options":["on","off"]}}
+                    ]
+                },
+                "d2-01-03": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"enum","name":"dim up","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dim down","ref":{"value":"dimDown"}},
+                        {"type":"int","name":"toggle to","ref":{"value":"toggleTo","ext":"%d", "extMeta":"0-100"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"enum","name":"output state","ref":{"value":"output_state","options":["on","off"]}},
+                        {"type":"int","name":"output value","ref":{"value":"output_value", "extMeta":"0-100"}}
+                    ]
+                },
+                "d2-01-11": {
+                    "command": [
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch1On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch1Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch1Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch2On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch2Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch2Toggle"}}
+                        ]}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch1_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch2_output_state","options":["on","off"]}}
+                        ]}
+                    ]
+                },
+                "d2-01-13": {
+                    "command": [
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch1On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch1Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch1Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch2On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch2Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch2Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch3On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch3Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch3Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch4On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch4Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch4Toggle"}}
+                        ]}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch1_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch2_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch3_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch4_output_state","options":["on","off"]}}
+                        ]}
+                    ]
+                },
+                "d2-01-14": {
+                    "command": [
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch1On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch1Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch1Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch2On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch2Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch2Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch3On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch3Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch3Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch4On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch4Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch4Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 5", "value":"ch5", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch5On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch5Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch5Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 6", "value":"ch6", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch6On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch6Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch6Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 7", "value":"ch7", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch7On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch7Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch7Toggle"}}
+                        ]},
+                        {"type":"root","name":"channel 8", "value":"ch8", "children":[
+                            {"type":"enum","name":"on","ref":{"value":"ch8On"}},
+                            {"type":"enum","name":"off","ref":{"value":"ch8Off"}},
+                            {"type":"enum","name":"toggle","ref":{"value":"ch8Toggle"}}
+                        ]}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"power failure detection","ref":{"value":"power_failure_detection","options":["true","false"]}},
+                        {"type":"enum","name":"power failure","ref":{"value":"power_failure", "options":["true","false"]}},
+                        {"type":"int","name":"over current switch off","ref":{"value":"over_current_switch_off", "extMeta":"0-1"}},
+                        {"type":"int","name":"error level","ref":{"value":"error_level", "extMeta":"0-3"}},
+                        {"type":"enum","name":"local_control","ref":{"value":"local_control", "options":["true","false"]}},
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch1_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch2_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch3_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch4_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 5", "value":"ch5", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch5_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 6", "value":"ch6", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch6_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 7", "value":"ch7", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch7_output_state","options":["on","off"]}}
+                        ]},
+                        {"type":"root","name":"channel 8", "value":"ch8", "children":[
+                            {"type":"enum","name":"state","ref":{"value":"ch8_output_state","options":["on","off"]}}
+                        ]}
+                    ]
+                },
+                "d2-05-00": {
+                    "command": [
+                        {"type":"enum","name":"move up","ref":{"value":"moveUp"}},
+                        {"type":"enum","name":"move down","ref":{"value":"moveDown"}},
+                        {"type":"int","name":"move to","ref":{"value":"moveTo", "extMeta":"0-100"}},
+                        {"type":"enum","name":"step up","ref":{"value":"stepUp"}},
+                        {"type":"enum","name":"step down","ref":{"value":"stepDown"}},
+                        {"type":"enum","name":"lamella up","ref":{"value":"lamellaUp"}},
+                        {"type":"enum","name":"lamella down","ref":{"value":"lamellaDown"}},
+                        {"type":"int","name":"lamella to","ref":{"value":"lamellaTo", "extMeta":"0-100"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"position","ref":{"value":"state","extMeta":"0-100"}},
+                        {"type":"int","name":"lamella","ref":{"value":"angle","extMeta":"0-100"}},
+                        {"type":"enum","name":"lock mode","ref":{"value":"lock", "options":["normal","blockage_mode","alarm_mode"]}}
+                    ]
+                },
+                "d2-05-01": {
+                    "command": [
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"enum","name":"move up","ref":{"value":"ch1moveUp"}},
+                            {"type":"enum","name":"move down","ref":{"value":"ch1moveDown"}},
+                            {"type":"int","name":"move to","ref":{"value":"ch1moveTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"step up","ref":{"value":"ch1stepUp"}},
+                            {"type":"enum","name":"step down","ref":{"value":"ch1stepDown"}},
+                            {"type":"enum","name":"lamella up","ref":{"value":"ch1lamellaUp"}},
+                            {"type":"enum","name":"lamella down","ref":{"value":"ch1lamellaDown"}},
+                            {"type":"int","name":"lamella to","ref":{"value":"ch1lamellaTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"stop","ref":{"value":"ch1stop"}},
+                            {"type":"float","name":"set run duration","ref":{"value":"ch1setRunTime", "ext":"%f", "extMeta":"5-300","scale":"0.1", "unit":"s"}},
+                            {"type":"int","name":"set rotation duration","ref":{"value":"ch1setRotationTime", "ext":"%d", "extMeta":"10-2540","scale":"10","unit":"ms"}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"enum","name":"move up","ref":{"value":"ch2moveUp"}},
+                            {"type":"enum","name":"move down","ref":{"value":"ch2moveDown"}},
+                            {"type":"int","name":"move to","ref":{"value":"ch2moveTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"step up","ref":{"value":"ch2stepUp"}},
+                            {"type":"enum","name":"step down","ref":{"value":"ch2stepDown"}},
+                            {"type":"enum","name":"lamella up","ref":{"value":"ch2lamellaUp"}},
+                            {"type":"enum","name":"lamella down","ref":{"value":"ch2lamellaDown"}},
+                            {"type":"int","name":"lamella to","ref":{"value":"ch2lamellaTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"stop","ref":{"value":"ch2stop"}},
+                            {"type":"float","name":"set run duration","ref":{"value":"ch2setRunTime", "ext":"%f", "extMeta":"5-300","scale":"0.1", "unit":"s"}},
+                            {"type":"int","name":"set rotation duration","ref":{"value":"ch2setRotationTime", "ext":"%d", "extMeta":"10-2540","scale":"10","unit":"ms"}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"enum","name":"move up","ref":{"value":"ch3moveUp"}},
+                            {"type":"enum","name":"move down","ref":{"value":"ch3moveDown"}},
+                            {"type":"int","name":"move to","ref":{"value":"ch3moveTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"step up","ref":{"value":"ch3stepUp"}},
+                            {"type":"enum","name":"step down","ref":{"value":"ch3stepDown"}},
+                            {"type":"enum","name":"lamella up","ref":{"value":"ch3lamellaUp"}},
+                            {"type":"enum","name":"lamella down","ref":{"value":"ch3lamellaDown"}},
+                            {"type":"int","name":"lamella to","ref":{"value":"ch3lamellaTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"stop","ref":{"value":"ch3stop"}},
+                            {"type":"float","name":"set run duration","ref":{"value":"ch3setRunTime","ext":"%f", "extMeta":"5-300","scale":"0.1", "unit":"s"}},
+                            {"type":"int","name":"set rotation duration","ref":{"value":"ch3setRotationTime", "ext":"%d", "extMeta":"10-2540","scale":"10","unit":"ms"}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"enum","name":"move up","ref":{"value":"ch4moveUp"}},
+                            {"type":"enum","name":"move down","ref":{"value":"ch4moveDown"}},
+                            {"type":"int","name":"move to","ref":{"value":"ch4moveTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"step up","ref":{"value":"ch4stepUp"}},
+                            {"type":"enum","name":"step down","ref":{"value":"ch4stepDown"}},
+                            {"type":"enum","name":"lamella up","ref":{"value":"ch4lamellaUp"}},
+                            {"type":"enum","name":"lamella down","ref":{"value":"ch4lamellaDown"}},
+                            {"type":"int","name":"lamella to","ref":{"value":"ch4lamellaTo", "extMeta":"0-100"}},
+                            {"type":"enum","name":"stop","ref":{"value":"ch4stop"}},
+                            {"type":"float","name":"set run duration","ref":{"value":"ch4setRunTime", "ext":"%f", "extMeta":"5-300","scale":"0.1", "unit":"s"}},
+                            {"type":"int","name":"set rotation duration","ref":{"value":"ch4setRotationTime", "ext":"%d", "extMeta":"10-2540","scale":"10","unit":"ms"}}
+                        ]}
+                    ],
+                    "status":[
+                        {"type":"root","name":"channel 1", "value":"ch1", "children":[
+                            {"type":"int","name":"position","ref":{"value":"ch1state","extMeta":"0-100"}},
+                            {"type":"int","name":"lamella","ref":{"value":"ch1angle","extMeta":"0-100"}},
+                            {"type":"enum","name":"lock mode","ref":{"value":"ch1lock", "options":["normal","blockage_mode","alarm_mode"]}}
+                        ]},
+                        {"type":"root","name":"channel 2", "value":"ch2", "children":[
+                            {"type":"int","name":"position","ref":{"value":"ch2state","extMeta":"0-100"}},
+                            {"type":"int","name":"lamella","ref":{"value":"ch2angle","extMeta":"0-100"}},
+                            {"type":"enum","name":"lock mode","ref":{"value":"ch2lock", "options":["normal","blockage_mode","alarm_mode"]}}
+                        ]},
+                        {"type":"root","name":"channel 3", "value":"ch3", "children":[
+                            {"type":"int","name":"position","ref":{"value":"ch3state","extMeta":"0-100"}},
+                            {"type":"int","name":"lamella","ref":{"value":"ch3angle","extMeta":"0-100"}},
+                            {"type":"enum","name":"lock mode","ref":{"value":"ch3lock", "options":["normal","blockage_mode","alarm_mode"]}}
+                        ]},
+                        {"type":"root","name":"channel 4", "value":"ch4", "children":[
+                            {"type":"int","name":"position","ref":{"value":"ch4state","extMeta":"0-100"}},
+                            {"type":"int","name":"lamella","ref":{"value":"ch4angle","extMeta":"0-100"}},
+                            {"type":"enum","name":"lock mode","ref":{"value":"ch4lock", "options":["normal","blockage_mode","alarm_mode"]}}
+                        ]}
+                    ]
+                },
+                "d2-06-01": {
+                    "command": [
+                        {"type":"enum","name":"vacation mode on","ref":{"value":"vacationOn"}},
+                        {"type":"enum","name":"vacation mode off","ref":{"value":"vacationOff"}},
+                        {"type":"enum","name":"handle closed click on","ref":{"value":"handleClosedClickOn"}},
+                        {"type":"enum","name":"handle closed click off","ref":{"value":"handleClosedClickOff"}},
+                        {"type":"enum","name":"battery low click on","ref":{"value":"batteryLowClickOn"}},
+                        {"type":"enum","name":"battery low click off","ref":{"value":"batteryLowClickOff"}},
+                        {"type":"int","name":"set sensor update interval","ref":{"value":"setSensorUpdateInterval", "ext":"%d","extMeta":"5-65535","unit":"s"}},
+                        {"type":"int","name":"set vacation blink interval","ref":{"value":"setVacationBlinkInterval", "ext":"%d","extMeta":"3-255","unit":"s"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}},
+                        {"type":"enum","name":"burglary alarm","ref":{"value":"bal","options":["ok","alarm","invalid","unsupported"]}},
+                        {"type":"enum","name":"protection plus alarm","ref":{"value":"ppal","options":["ok","alarm","invalid","unsupported"]}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed","tilted","invalid","undefined"]}},
+                        {"type":"enum","name":"handle state","ref":{"value":"handle","options":["up","down","left","right","undefined","invalid","unsupported"]}},
+                        {"type":"enum","name":"window state","ref":{"value":"window","options":["tilted","not_tilted","undefined","invalid","unsupported"]}},
+                        {"type":"enum","name":"right button","ref":{"value":"br","options":["pressed","releaseed","undefined","invalid","unsupported"]}},
+                        {"type":"enum","name":"left button","ref":{"value":"bl","options":["pressed","releaseed","undefined","invalid","unsupported"]}},
+                        {"type":"enum","name":"motion","ref":{"value":"motion","options":["ok","alarm","invalid","unsupported"]}},
+                        {"type":"enum","name":"vacation mode","ref":{"value":"vacation","options":["on","off","unchanged","invalid","unsupported"]}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity"}},
+                        {"type":"int","name":"illumination","ref":{"value":"illumination"}},
+                        {"type":"int","name":"battery","ref":{"value":"battery"}},
+                        {"type":"enum","name":"handle closed click","ref":{"value":"hccr","options":["on","off"]}},
+                        {"type":"enum","name":"battery low click","ref":{"value":"blcr","options":["on","off"]}},
+                        {"type":"int","name":"sensor update interval","ref":{"value":"suir","unit":"s"}},
+                        {"type":"int","name":"vacation blink interval","ref":{"value":"vbir","unit":"s"}}
+                    ]
+                },
+                "d2-06-02": {
+                    "command": [
+                        {"type":"enum","name":"vacation mode on","ref":{"value":"vacationOn"}},
+                        {"type":"enum","name":"vacation mode off","ref":{"value":"vacationOff"}},
+                        {"type":"enum","name":"lock active click on","ref":{"value":"lockActiveClickOn"}},
+                        {"type":"enum","name":"lock active click off","ref":{"value":"lockActiveClickOff"}},
+                        {"type":"enum","name":"battery low click on","ref":{"value":"batteryLowClickOn"}},
+                        {"type":"enum","name":"battery low click off","ref":{"value":"batteryLowClickOff"}},
+                        {"type":"int","name":"set sensor update interval","ref":{"value":"setSensorUpdateInterval", "ext":"%d","extMeta":"5-65535","unit":"s"}},
+                        {"type":"int","name":"set vacation blink interval","ref":{"value":"setVacationBlinkInterval", "ext":"%d","extMeta":"3-255","unit":"s"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["ok","burglary_alarm","unlock_alarm"]}},
+                        {"type":"enum","name":"operation mode","ref":{"value":"operation_mode","options":["standard","hst"]}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["open","closed","tilted"]}},
+                        {"type":"enum","name":"lock state","ref":{"value":"lock","options":["unlocked","locked"]}},
+                        {"type":"enum","name":"window state","ref":{"value":"window","options":["tilted","not_tilted"]}},
+                        {"type":"enum","name":"vacation mode","ref":{"value":"vacation","options":["on","off","unchanged","invalid","unsupported"]}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity"}},
+                        {"type":"int","name":"battery","ref":{"value":"battery"}},
+                        {"type":"enum","name":"lock active click","ref":{"value":"hccr","options":["on","off"]}},
+                        {"type":"enum","name":"battery low click","ref":{"value":"blcr","options":["on","off"]}},
+                        {"type":"int","name":"sensor update interval","ref":{"value":"suir","unit":"s"}},
+                        {"type":"int","name":"vacation blink interval","ref":{"value":"vbir","unit":"s"}}
+                    ]
+                },
+                "d2-06-20": {
+                    "command": [
+                        {"type":"int","name":"move to","ref":{"value":"moveTo", "ext":"%d","extMeta":"0-100"}},
+                        /*{"type":"multi","name":"move to (with duration)","ref":{"value":"moveToDuration","ext":"%multi","extMeta":[
+                            {"type":"int","name":"position","ref":{"value":"position","ext":"%d","extMeta":"0-100"}},
+                            {"type":"int","name":"duration","ref":{"value":"duration", "ext":"%d", "extMeta":"0-300"}}
+                        ]}},
+                        {"type":"multi","name":"set Function","ref":{"value":"setFunction","ext":"%multi","extMeta":[
+                            {"type":"int","name":"position","ref":{"value":"position","ext":"%d","extMeta":"0-100"}},
+                            {"type":"int","name":"duration","ref":{"value":"duration", "ext":"%d", "extMeta":"0-300"}}
+                        ]}},*/
+                        {"type":"enum","name":"activate","ref":{"value":"activate"}},
+                        {"type":"enum","name":"deactivate","ref":{"value":"deactivate"}},
+                        {"type":"enum","name":"lock","ref":{"value":"lock"}},
+                        {"type":"enum","name":"unlock","ref":{"value":"unlock"}},
+                        {"type":"enum","name":"open","ref":{"value":"open"}},
+                        {"type":"enum","name":"close","ref":{"value":"close"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}}
+                    ],
+                    "status":[ // TODO: change states for taskmanager
+                        {"type":"int","name":"position","ref":{"value":"position","extMeta":"0-100"}},
+                        {"type":"enum","name":"locked","ref":{"value":"locked","options":["true","false"]}},
+                        {"type":"enum","name":"error","ref":{"value":"error","options":["no_error","tilt_error","connection_error","overcurrent_error","timeout_error","failure_error"]}},
+                        {"type":"string","name":"running","ref":{"value":"running"}},
+                        {"type":"enum","name":"function","ref":{"value":"function","options":["true","false"]}},
+                        {"type":"int","name":"function tilt","ref":{"value":"functionTilt","extMeta":"0-100"}},
+                        {"type":"int","name":"function duration","ref":{"value":"functionDuration","extMeta":"0-120","unit":"min"}},
+                        {"type":"int","name":"remaining time","ref":{"value":"remaining_time","extMeta":"0-120","unit":"min"}},
+                    ],
+                    "event":[
+                        {"type":"int","name":"position","ref":{"value":"position","extMeta":"0-100"}},
+                        {"type":"enum","name":"locked","ref":{"value":"locked","options":["true","false"]}},
+                        {"type":"int","name":"remaining time","ref":{"value":"remaining_time", "ext": "%d", "extMeta":"0-120","unit":"min"}}
+                    ],
+                    "ipevt":[
+                        {"type":"int","name":"position","ref":{"value":"position","extMeta":"0-100"}},
+                        {"type":"enum","name":"locked","ref":{"value":"locked","options":["true","false"]}},
+                        {"type":"int","name":"remaining time","ref":{"value":"remaining_time", "ext": "%d", "extMeta":"0-120","unit":"min"}}
+                    ]
+                },
+                "d2-06-40": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["open", "tilted"]}]
+                        }
+                    },
+                    "command": [
+                        {"type":"enum","name":"authenticate","ref":{"value":"authenticate"}},
+                        {"type":"enum","name":"deauthenticate","ref":{"value":"deauthenticate"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed","tilted"]}},
+                        {"type":"enum","name":"lock","ref":{"value":"lock","options":["true","false"]}},
+                        {"type":"enum","name":"auth","ref":{"value":"auth","options":["true","false"]}},
+                        {"type":"string","name":"error","ref":{"value":"error"}}
+                    ]
+                },
+                "afriso_water_con": {
+                    "status":[
+                        {"type":"enum","name":"water","ref":{"value":"water","options":["true", "false"]}}
+                    ]
+                },
+                "afriso_water_eco": {
+                    "status":[
+                        {"type":"enum","name":"water","ref":{"value":"water","options":["true", "false"]}}
+                    ]
+                },
+                "afriso_asd_10": {
+                    "status":[
+                        {"type":"enum","name":"smoke","ref":{"value":"smoke","options":["true","false"]}}
+                    ]
+                },
+                "hoppe_door": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "door", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"door","ref":{"value":"door","options":["open","closed"]}}
+                    ]
+                }
+            },
+            "eltako":{
+                "eltako_contact": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "contact", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"contact","ref":{"value":"contact","options":["open","closed"]}},
+                        {"type":"int","name":"handle raw","ref":{"value":"handle_raw"}}
+                    ]
+                },
+                "eltako_motion": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["on"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination","extMeta":"0-2048"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "eltako_motion2": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["on"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","extMeta":"0-5.1"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination","extMeta":"0-510"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}},
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}}
+                    ]
+                },
+                "eltako_switch": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}}
+                    ]
+                },
+                "eltako_dimmer": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"enum","name":"dim up","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dim down","ref":{"value":"dimDown"}},
+                        {"type":"int","name":"toggle to","ref":{"value":"toggleTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set ramp time","ref":{"value":"setRampTime","ext":"%d", "extMeta":"0-255"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"level", "extMeta":"0-100"}},
+                        {"type":"int","name":"ramp time","ref":{"value":"ramp_time", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_dimmer2": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"enum","name":"dim up","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dim down","ref":{"value":"dimDown"}},
+                        {"type":"int","name":"toggle to","ref":{"value":"toggleTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set ramp time","ref":{"value":"setRampTime","ext":"%d", "extMeta":"0-255"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"ramp time","ref":{"value":"ramp_time", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_dimmer_knob": {
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"dimmerLevel", "extMeta":"0-100"}}
+                    ]
+                },
+                "eltako_fsud": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"enum","name":"dim up","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dim down","ref":{"value":"dimDown"}},
+                        {"type":"int","name":"toggle to","ref":{"value":"toggleTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set ramp time","ref":{"value":"setRampTime","ext":"%d", "extMeta":"0-255"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"level", "extMeta":"0-100"}},
+                        {"type":"int","name":"ramp time","ref":{"value":"ramp_time", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_weather": {
+                    "status":[
+                        {"type":"float","name":"energy","ref":{"value":"energy", "extMeta":"0-7.2"}},
+                        {"type":"int","name":"energy raw","ref":{"value":"energy_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"-20-60"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}},
+                        {"type":"float","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}},
+                        {"type":"int","name":"humidity raw","ref":{"value":"humidity_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "eltako_lux": {
+                    "status":[
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-30000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_lux2": {
+                    "status":[
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-30000"}},
+                        {"type":"int","name":"illumination raw","ref":{"value":"illumination_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_sender4": {
+                    "status":[
+                        {"type":"enum","name":"E1","ref":{"value":"E1","options":["pressed","released"]}},
+                        {"type":"enum","name":"E2","ref":{"value":"E2","options":["pressed","released"]}},
+                        {"type":"enum","name":"E3","ref":{"value":"E3","options":["pressed","released"]}},
+                        {"type":"enum","name":"E4","ref":{"value":"E4","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"E1","ref":{"value":"E1","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"E2","ref":{"value":"E2","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"E3","ref":{"value":"E3","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"E4","ref":{"value":"E4","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_sender2": {
+                    "status":[
+                        {"type":"enum","name":"A1","ref":{"value":"A1","options":["pressed","released"]}},
+                        {"type":"enum","name":"A3","ref":{"value":"A3","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"A1","ref":{"value":"A1","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"A3","ref":{"value":"A3","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_button4": {
+                    "status":[
+                        {"type":"enum","name":"BO","ref":{"value":"BO","options":["pressed","released"]}},
+                        {"type":"enum","name":"BI","ref":{"value":"BI","options":["pressed","released"]}},
+                        {"type":"enum","name":"AO","ref":{"value":"AO","options":["pressed","released"]}},
+                        {"type":"enum","name":"AI","ref":{"value":"AI","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"BO","ref":{"value":"BO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"BI","ref":{"value":"BI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"AO","ref":{"value":"AO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"AI","ref":{"value":"AI","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_button2": {
+                    "status":[
+                        {"type":"enum","name":"button O","ref":{"value":"buttonO","options":["pressed","released"]}},
+                        {"type":"enum","name":"button I","ref":{"value":"buttonI","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button O","ref":{"value":"buttonO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"button I","ref":{"value":"buttonI","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_button1": {
+                    "status":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_fsm60b": {
+                    "status":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_fkf": {
+                    "status":[
+                        {"type":"enum","name":"key card","ref":{"value":"keycard","options":["inserted","takeout"]}}
+                    ]
+                },
+                "eltako_fkc": {
+                    "status":[
+                        {"type":"enum","name":"key card","ref":{"value":"keycard","options":["guest_card","service_card","takeout"]}}
+                    ]
+                },
+                "eltako_thermo": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint","extMeta":"0-40", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"int","name":"night reduce","ref":{"value":"night_reduce","extMeta":"0-5"}},
+                        {"type":"int","name":"night reduce raw","ref":{"value":"night_reduce_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_ftr65hb": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint","extMeta":"0-40", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_futh65d": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint","extMeta":"0-40", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}},
+                        {"type":"int","name":"night reduce","ref":{"value":"night_reduce","extMeta":"0-5"}},
+                        {"type":"int","name":"night reduce raw","ref":{"value":"night_reduce_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_ftr78s": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint","extMeta":"8-30", "unit":"°C"}},
+                        {"type":"int","name":"set point raw","ref":{"value":"setpoint_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_powermeter": {
+                    "status":[
+                        {"type":"float","name":"power","ref":{"value":"power", "extMeta":"0-16777215"}},
+                        {"type":"float","name":"energy","ref":{"value":"energy", "extMeta":"0-16777215"}},
+                        {"type":"int","name":"tariff","ref":{"value":"tariff","extMeta":"0-1"}}
+                    ]
+                },
+                "eltako_powermeter2": {
+                    "status":[
+                        {"type":"float","name":"power","ref":{"value":"power", "extMeta":"0-16777215"}}
+                    ]
+                },
+                "eltako_fzs": {
+                    "status":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_blind": {
+                    "command":[
+                        {"type":"enum","name":"sync","ref":{"value":"sync"}},
+                        {"type":"enum","name":"up","ref":{"value":"up"}},
+                        {"type":"enum","name":"down","ref":{"value":"down"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}},
+                        {"type":"int","name":"step up","ref":{"value":"stepUp","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"step down","ref":{"value":"stepDown","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set rv","ref":{"value":"setRV","ext":"%d", "extMeta":"1-200"}},
+                        {"type":"int","name":"set run time","ref":{"value":"setRunTime","ext":"%d", "extMeta":"1-200"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"sync","ref":{"value":"sync","options":["true","false"]}},
+                        {"type":"int","name":"position","ref":{"value":"pos", "extMeta":"0-100"}},
+                        {"type":"int","name":"run time","ref":{"value":"rt", "extMeta":"1-200"}},
+                        {"type":"int","name":"time delay (rv)","ref":{"value":"rv", "extMeta":"1-200"}}
+                    ],
+                    "ipevt":[
+                        {"type":"int","name":"position","ref":{"value":"pos", "extMeta":"0-100"}}
+                    ]
+                },
+                "eltako_relay": {
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}}
+                    ]
+                },
+                "eltako_relay2": {
+                    "status":[
+                        {"type":"enum","name":"channel 1","ref":{"value":"ch1","options":["on","off"]}},
+                        {"type":"enum","name":"channel 2","ref":{"value":"ch2","options":["on","off"]}}
+                    ]
+                },
+                "eltako_heat": {
+                    "status":[
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm", "options":["ok","alarm"]}},
+                        {"type":"int","name":"alarm raw","ref":{"value":"alarmy_raw", "extMeta":"0-255"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-250"}}
+                    ]
+                },
+                "eltako_water_m3": {
+                    "status":[
+                        {"type":"enum","name":"water","ref":{"value":"water", "options":["true","false"]}},
+                        {"type":"int","name":"water raw","ref":{"value":"water_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_water_m4": {
+                    "status":[
+                        {"type":"enum","name":"water","ref":{"value":"water", "options":["true","false"]}},
+                        {"type":"int","name":"water raw","ref":{"value":"water_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_tf_ttb": {
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-250"}},
+                        {"type":"enum","name":"present","ref":{"value":"state", "options":["on","off"]}},
+                        {"type":"int","name":"state raw","ref":{"value":"state_raw", "extMeta":"0-1"}}
+                    ],
+                    "ipevt":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"enum","name":"present","ref":{"value":"state", "options":["on","off"]}},
+                        {"type":"enum","name":"button","ref":{"value":"button","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                },
+                "eltako_tf_smoke": {
+                    "status":[
+                        {"type":"enum","name":"smoke","ref":{"value":"smoke","options":["true","false"]}},
+                        {"type":"int","name":"smoke raw","ref":{"value":"smoke_raw"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"temperature raw","ref":{"value":"temperature_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_tf_contact": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "contact", "states": ["open"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"contact","ref":{"value":"contact","options":["open","closed"]}},
+                        {"type":"int","name":"contact raw","ref":{"value":"contact_raw"}},
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}},
+                        {"type":"int","name":"voltage raw","ref":{"value":"voltage_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_tf_motion": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "motion", "states": ["true"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"motion","ref":{"value":"motion","options":["true","false"]}},
+                        {"type":"int","name":"motion raw","ref":{"value":"motion_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_tf_input": {
+                    "status":[
+                        {"type":"enum","name":"input","ref":{"value":"input","options":["true","false"]}},
+                        {"type":"int","name":"input raw","ref":{"value":"input_raw", "extMeta":"0-255"}}
+                    ]
+                },
+                "eltako_tf_switch": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}}
+                    ]
+                },
+                "eltako_tf_dimmer": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"enum","name":"dim up","ref":{"value":"dimUp"}},
+                        {"type":"enum","name":"dim down","ref":{"value":"dimDown"}},
+                        {"type":"int","name":"toggle to","ref":{"value":"toggleTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set ramp time","ref":{"value":"setRampTime","ext":"%d", "extMeta":"0-255"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"level", "extMeta":"0-100"}},
+                        {"type":"int","name":"ramp time","ref":{"value":"ramp_time", "extMeta":"0-255"}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"level", "extMeta":"0-100"}}
+                    ]
+                },
+                "eltako_tf_blind": {
+                    "command":[
+                        {"type":"enum","name":"sync","ref":{"value":"sync"}},
+                        {"type":"enum","name":"up","ref":{"value":"up"}},
+                        {"type":"enum","name":"down","ref":{"value":"down"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}},
+                        {"type":"int","name":"step up","ref":{"value":"stepUp","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"step down","ref":{"value":"stepDown","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"int","name":"set rv","ref":{"value":"setRV","ext":"%d", "extMeta":"1-200"}},
+                        {"type":"int","name":"set run time","ref":{"value":"setRunTime","ext":"%d", "extMeta":"1-200"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"sync","ref":{"value":"sync","options":["true","false"]}},
+                        {"type":"int","name":"position","ref":{"value":"pos", "extMeta":"0-100"}},
+                        {"type":"int","name":"run time","ref":{"value":"rt", "extMeta":"1-200"}},
+                        {"type":"int","name":"time delay (rv)","ref":{"value":"rv", "extMeta":"1-200"}}
+                    ],
+                    "ipevt":[
+                        {"type":"int","name":"position","ref":{"value":"pos", "extMeta":"0-100"}}
+                    ]
+                },
+                "eltako_tf_alarm": {
+                    "command":[
+                        {"type":"enum","name":"activate","ref":{"value":"activate"}},
+                        {"type":"enum","name":"deactivate","ref":{"value":"deactivate"}},
+                        {"type":"enum","name":"trigger alarm","ref":{"value":"triggerAlarm"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"active","ref":{"value":"active","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["ok","alarm"]}}
+                    ]
+                },
+                "eltako_tf_lux": {
+                    "status":[
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-30000"}}
+                    ]
+                },
+                "eltako_tf_thermo": {
+                    "status":[
+                        {"type":"float","name":"set point","ref":{"value":"setpoint","extMeta":"12-28", "unit":"°C"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}}
+                    ]
+                },
+                "eltako_f6t": {
+                    "status":[
+                        {"type":"enum","name":"CO","ref":{"value":"buttonCO","options":["pressed","released"]}},
+                        {"type":"enum","name":"CI","ref":{"value":"buttonCI","options":["pressed","released"]}},
+                        {"type":"enum","name":"BO","ref":{"value":"buttonBO","options":["pressed","released"]}},
+                        {"type":"enum","name":"BI","ref":{"value":"buttonBI","options":["pressed","released"]}},
+                        {"type":"enum","name":"AO","ref":{"value":"buttonAO","options":["pressed","released"]}},
+                        {"type":"enum","name":"AI","ref":{"value":"buttonAI","options":["pressed","released"]}}
+                    ],
+                    "ipevt":[
+                        {"type":"enum","name":"CO","ref":{"value":"buttonCO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"CI","ref":{"value":"buttonCI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"BO","ref":{"value":"buttonBO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"BI","ref":{"value":"buttonBI","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"AO","ref":{"value":"buttonAO","options":["pressed","released","shortPress","longPress"]}},
+                        {"type":"enum","name":"AI","ref":{"value":"buttonAI","options":["pressed","released","shortPress","longPress"]}}
+                    ]
+                }
+            },
+            "opus": {
+                "opus_sms_multifnc": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "motion", "states": ["true"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"motion","ref":{"value":"motion","options":["true","false"]}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature", "extMeta":"0-40"}},
+                        {"type":"int","name":"humidity","ref":{"value":"humidity", "extMeta":"0-100"}}
+                    ]
+                },
+                "opus_sms_aw": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "motion", "states": ["true"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"motion","ref":{"value":"motion","options":["true","false"]}},
+                        {"type":"float","name":"illumination","ref":{"value":"illumination", "extMeta":"0-1000"}},
+                        {"type":"float","name":"voltage","ref":{"value":"voltage", "extMeta":"0-5.0"}}
+                    ]
+                },
+                "opus_sms_std": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "motion", "states": ["true"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"motion","ref":{"value":"motion","options":["true","false"]}}
+                    ]
+                },
+                "opus_bridge_switch1k": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}}
+                    ]
+                },
+                "opus_bridge_switch2k": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}}
+                    ]
+                },
+                "opus_bridge_dimmer": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}},
+                        {"type":"int","name":"dim to","ref":{"value":"dimTo","ext":"%d", "extMeta":"0-100"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"int","name":"level","ref":{"value":"dimmerLevel", "extMeta":"0-100"}}
+                    ]
+                },
+                "opus_bridge_blind": {
+                    "command":[
+                        {"type":"enum","name":"move up","ref":{"value":"moveUp"}},
+                        {"type":"enum","name":"move down","ref":{"value":"moveDown"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}},
+                        {"type":"enum","name":"step up", "ref":{"value":"stepUp"}},
+                        {"type":"enum","name":"step down", "ref":{"value":"stepDown"}},
+                        {"type":"enum","name":"lamella up", "ref":{"value": "lamellaUp"}},
+                        {"type":"enum","name":"lamella down", "ref":{"value": "lamellaDown"}},
+                        {"type":"int","name":"lamella to", "ref":{"value":"lamellaTo", "ext":"%d", "extMeta": "0-100"}},
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d", "extMeta":"0-100"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"position","ref":{"value":"position", "extMeta":"0-100"}},
+                        {"type":"int","name":"lamella","ref":{"value":"lamella", "extMeta":"0-100"}}
+                    ]
+                }
+            },
+            "peha": {
+                "peha_switch": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"enum","name":"error","ref":{"value":"error","options":["no_error","lamp_failure","intern_failure","extern_failure"]}}
+                    ]
+                },
+                "peha_powerswitch": {
+                    "command":[
+                        {"type":"enum","name":"on","ref":{"value":"on"}},
+                        {"type":"enum","name":"off","ref":{"value":"off"}},
+                        {"type":"enum","name":"toggle","ref":{"value":"toggle"}}
+                    ],
+                    "status":[
+                        {"type":"enum","name":"state","ref":{"value":"state","options":["on","off"]}},
+                        {"type":"enum","name":"error","ref":{"value":"error","options":["no_error","lamp_failure","intern_failure","extern_failure"]}},
+                        {"type":"int","name":"power","ref":{"value":"power","ext":"%d"}},
+                        {"type":"enum","name":"power unit","ref":{"value":"power_unit","options":["mW","W","KW","MW"]}},
+                        {"type":"int","name":"energy","ref":{"value":"energy","ext":"%d"}},
+                        {"type":"enum","name":"energy unit","ref":{"value":"energy_unit","options":["Wh","kWh","MWh","GWh"]}}
+                    ]
+                },
+                "peha_blind": {
+                    "command":[
+                        {"type":"enum","name":"up","ref":{"value":"up"}},
+                        {"type":"enum","name":"down","ref":{"value":"down"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}},
+                        {"type":"int","name":"step up","ref":{"value":"stepUp","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"step down","ref":{"value":"stepDown","ext":"%d", "extMeta":"1-10"}},
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d", "extMeta":"0-100"}},
+                        {"type":"string","name":"set run time","ref":{"value":"setRunTime","ext":"%s", "format":"closeTime:openTime"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"position","ref":{"value":"position","extMeta":"1-100"}},
+                        {"type":"enum","name":"position enabled","ref":{"value":"position_flag","options":["true","false"]}},
+                        {"type":"enum","name":"angle enabled","ref":{"value":"angle_flag","options":["true","false"]}},
+                        {"type":"enum","name":"error","ref":{"value":"error","options":["no_error","no_end_position","intern_failure"]}},
+                        {"type":"int","name":"position mode","ref":{"value":"position_mode","extMeta":"0-1"}}
+                    ]
+                }
+            },
+            "rehau": {
+                "bb-aa-cc": {
+                    "alarm" : {
+                        "state": {
+                            "devices": [],
+                            "data": [],
+                            "check": [{"value":"state","states":["closed"]}] 
+                        }
+                    },
+                    "command":[
+                        {"type":"enum","name":"alarm on","ref":{"value":"alertOn"}},
+                        {"type":"enum","name":"alarm off","ref":{"value":"alertOff"}},
+                        {"type":"enum","name":"alarm toggle","ref":{"value":"alertToggle"}},
+                        {"type":"enum","name":"reset alarm","ref":{"value":"resetAlarm"}},
+                        {"type":"enum","name":"reset pre-alarm","ref":{"value":"resetPreAlarm"}},
+                        {"type":"enum","name":"pre-alarm on","ref":{"value":"preAlarmOn"}},
+                        {"type":"enum","name":"pre-alarm off","ref":{"value":"preAlarmOff"}},
+                        {"type":"enum","name":"pre-alarm toggle","ref":{"value":"preAlarmToggle"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"battery","ref":{"value":"battery","ext":"%d","extMeta":"0-255"}},
+                        {"type":"enum","name":"pre-alarm","ref":{"value":"pre_alarm","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["true","false"]}},
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed"]}},
+                        {"type":"enum","name":"pre-alarm enabled","ref":{"value":"pre_alarm_enabled","options":["true","false"]}},
+                        {"type":"enum","name":"alarm enabled","ref":{"value":"alarm_enabled","options":["true","false"]}},
+                        {"type":"int","name":"error","ref":{"value":"error","ext":"%d"}},
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}}
+                    ]
+                },
+                "d2-06-10": {
+                    "alarm" : {
+                        "state": {
+                            "devices": [],
+                            "data": [],
+                            "check": [{"value":"window","states":["closed"]}] 
+                        }
+                    },
+                    "command":[
+                        {"type":"enum","name":"alarm on","ref":{"value":"alertOn"}},
+                        {"type":"enum","name":"alarm off","ref":{"value":"alertOff"}},
+                        {"type":"enum","name":"alarm toggle","ref":{"value":"alertToggle"}},
+                        {"type":"enum","name":"reset alarm","ref":{"value":"resetAlarm"}},
+                        {"type":"enum","name":"reset pre-alarm","ref":{"value":"resetPreAlarm"}},
+                        {"type":"enum","name":"pre-alarm on","ref":{"value":"preAlarmOn"}},
+                        {"type":"enum","name":"pre-alarm off","ref":{"value":"preAlarmOff"}},
+                        {"type":"enum","name":"pre-alarm toggle","ref":{"value":"preAlarmToggle"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"battery","ref":{"value":"battery","ext":"%d","extMeta":"0-255"}},
+                        {"type":"enum","name":"pre-alarm","ref":{"value":"pre_alarm","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["true","false"]}},
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed"]}},
+                        {"type":"enum","name":"pre-alarm enabled","ref":{"value":"pre_alarm_enabled","options":["true","false"]}},
+                        {"type":"enum","name":"alarm enabled","ref":{"value":"alarm_enabled","options":["true","false"]}},
+                        {"type":"int","name":"error","ref":{"value":"error","ext":"%d"}},
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}}
+                    ]
+                },
+                "d2-06-ff": {
+                    "alarm" : {
+                        "state": {
+                            "devices": [],                            
+                            "data": [],
+                            "check": [{"value":"window","states":["closed"]}] 
+                        }
+                    },
+                    "command":[
+                        {"type":"enum","name":"alarm on","ref":{"value":"alertOn"}},
+                        {"type":"enum","name":"alarm off","ref":{"value":"alertOff"}},
+                        {"type":"enum","name":"alarm toggle","ref":{"value":"alertToggle"}},
+                        {"type":"enum","name":"reset alarm","ref":{"value":"resetAlarm"}},
+                        {"type":"enum","name":"reset pre-alarm","ref":{"value":"resetPreAlarm"}},
+                        {"type":"enum","name":"pre-alarm on","ref":{"value":"preAlarmOn"}},
+                        {"type":"enum","name":"pre-alarm off","ref":{"value":"preAlarmOff"}},
+                        {"type":"enum","name":"pre-alarm toggle","ref":{"value":"preAlarmToggle"}}
+                    ],
+                    "status":[
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","ext":"%f","extMeta":"0-5.0", "scale":"0.1"}},
+                        {"type":"enum","name":"pre-alarm","ref":{"value":"pre_alarm","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["true","false"]}},
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed", "tilted"]}},
+                        {"type":"enum","name":"pre-alarm enabled","ref":{"value":"pre_alarm_enabled","options":["true","false"]}},
+                        {"type":"enum","name":"alarm enabled","ref":{"value":"alarm_enabled","options":["true","false"]}},
+                        {"type":"enum","name":"pending","ref":{"value":"pending","options":["true","false"]}}
+                    ],
+                    "event": [
+                        {"type":"enum","name":"window","ref":{"value":"window","options":["open","closed", "tilted"]}}, 
+                        {"type":"enum","name":"pre-alarm","ref":{"value":"pre_alarm","options":["true","false"]}},
+                        {"type":"enum","name":"alarm","ref":{"value":"alarm","options":["true","false"]}},                        
+                        {"type":"float","name":"voltage","ref":{"value":"voltage","ext":"%f","extMeta":"0-5.0", "scale":"0.1"}}
+                    ]
+                },
+                "d2-20-00": {
+                    "command":[
+                        {"type":"enum","name":"fan level up","ref":{"value":"fanLevelUp"}},
+                        {"type":"enum","name":"fan level down","ref":{"value":"fanLevelDown"}},
+                        {"type":"int","name":"set fan level","ref":{"value":"setFanLevel","ext":"%d","extMeta":"0-6"}},
+                        {"type":"enum","name":"update status","ref":{"value":"requestStatus"}}
+                    ],
+                    "status":[
+                        {"type":"int","name":"current fan level","ref":{"value":"current_fan_level","ext":"%d","extMeta":"0-4"}},
+                        {"type":"int","name":"set fan level","ref":{"value":"set_fan_level","ext":"%d","extMeta":"0-6"}},
+                        {"type":"enum","name":"anti freeze","ref":{"value":"anti_freeze","options":["on","off"]}},
+                        {"type":"int","name":"message code","ref":{"value":"message_code","ext":"%d"}},
+                        {"type":"string","name":"message code (hex)","ref":{"value":"message_code_hex","ext":"%s"}},
+                        {"type":"float","name":"temperature","ref":{"value":"temperature","ext":"%f","extMeta":"-20.0-70.0"}},
+                        {"type":"int","name":"operating time (min)","ref":{"value":"operating_time_m"}},
+                        {"type":"int","name":"operating time (hour)","ref":{"value":"operating_time_h"}},
+                        {"type":"int","name":"operating time (day)","ref":{"value":"operating_time_d"}},
+                        {"type":"int","name":"operating time (year)","ref":{"value":"operating_time_y"}},
+                        {"type":"int","name":"filter remain time (min)","ref":{"value":"filter_remaining_time_m"}},
+                        {"type":"int","name":"filter remain time (hour)","ref":{"value":"filter_remaining_time_h"}},
+                        {"type":"int","name":"filter remain time (day)","ref":{"value":"filter_remaining_time_d"}},
+                        {"type":"int","name":"filter remain time (year)","ref":{"value":"filter_remaining_time_y"}}
+                    ]
+                }
+            },
+            "schueco": {
+                "schueco_bolt": {
+                    "alarm" :  {
+                        "state": {
+                            "devices": [],
+                            "data": [ 
+                                {"value": "state", "states": ["unlocked"]}]
+                        }
+                    },
+                    "status":[
+                        {"type":"enum","name":"window","ref":{"value":"state","options":["locked","unlocked"]}}                        
+                    ]   
+                }
+            },
+            "siegenia": {
+                "d2-06-50": {
+                    "status":[
+                        { type: "enum", name: "alive timeout", ref: { value: "aliveTimeout", options: ["true", "false"] } },
+                        { type: "int", name: "battery charge", ref: { value: "battery", ext: "%d", extMeta: "0-100" } },
+                        { type: "enum", name: "battery OK", ref: { value: "batteryOK", options: ["true", "false"] } },
+                        { type: "enum", name: "handle", ref: { value: "handle", options: ["closed", "open", "tilted"] } },
+                        { type: "enum", name: "state", ref: { value: "state", options: ["closed", "open", "tilted"] } }
+                    ],
+                    "ipevt":[
+                        { type: "enum", name: "alive timeout", ref: { value: "aliveTimeout", options: ["true", "false"] } },
+                        { type: "int", name: "battery charge", ref: { value: "battery", ext: "%d", extMeta: "0-100" } },
+                        { type: "enum", name: "battery OK", ref: { value: "batteryOK", options: ["true", "false"] } },
+                        { type: "enum", name: "handle", ref: { value: "handle", options: ["closed", "open", "tilted"] } },
+                        { type: "enum", name: "state", ref: { value: "state", options: ["closed", "open", "tilted"] } },
+                        { type: "enum", name: "alarm", ref: { value: "burglary", options: ["true"] } }
+                    ]
+                }
+            },
+            "elero":{
+                "elero_R10":{
+                    "command": [
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d","extMeta":"0-100"}},
+                        {"type":"enum","name":"move up","ref":{"value":"moveUp"}},
+                        {"type":"enum","name":"move down","ref":{"value":"moveDown"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}}
+                    ],
+                    "status": [
+                        {"type":"int","name":"position","ref":{"value":"position","ext":"%d","extMeta":"0-100"}}
+                    ]
+                },
+            },
+            "becker":{
+                "becker_motor": {
+                    "command": [
+                        {"type":"int","name":"move to","ref":{"value":"moveTo","ext":"%d","extMeta":"0-100"}},
+                        {"type":"enum","name":"move up","ref":{"value":"moveUp"}},
+                        {"type":"enum","name":"move down","ref":{"value":"moveDown"}},
+                        {"type":"enum","name":"stop","ref":{"value":"stop"}}
+                        //{"type":"enum","name":"step up","ref":{"value":"stepUp"}},
+                        //{"type":"enum","name":"step down","ref":{"value":"stepDown"}}
+                    ],
+                    "status": [
+                        {"type":"int","name":"position","ref":{"value":"position","ext":"%d","extMeta":"0-100"}},
+                        //{"type":"int","name":"lamella","ref":{"value":"lamella","ext":"%d","extMeta":"0-100"}}
+                    ]
+                }
+            }
+        },
+        }
