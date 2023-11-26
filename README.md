@@ -65,7 +65,7 @@ You can control devices via `POST` to the `/cmd` endpoint with a json body like 
   "id": "DEVICE-SID-FROM-SYSTEMS.JSON",
   "data":
   {
-    "cmd": `COMMAND`,
+    "cmd": "COMMAND",
   },
 };
 ```
