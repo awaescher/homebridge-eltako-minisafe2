@@ -12,16 +12,27 @@
         "placeholder": "192.168.1.1"
       },
       "password": {
-        "title": "The password to access the MiniSafe2 (can be left empty if an access token is used)",
+        "title": "The password to access the MiniSafe2",
+        "description": "Can be left empty if an access token is used",
         "type": "string",
         "required": false,
         "default": ""
       },
       "accessToken": {
-        "title": "The access token to access the MiniSafe2 (only required if no password is used)",
+        "title": "The access token to access the MiniSafe2",
+        "description": "Only required if no password is used.",
         "type": "string",
         "required": false,
         "default": ""
+      },
+      "queryLoopDelay": {
+        "title": "The delay in seconds to wait between two state queries.",
+        "description": "The states of all your devices have to be polled regularly. Doing this without a delay might downgrade the performance of the MiniSafe2. If you set the delay too high, HomeKit updates will be slow.",
+        "type": "integer",
+        "required": false,
+        "default": 2,
+        "minimum": 1,
+        "maximum": 60
       }
     }
   }

@@ -54,7 +54,7 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
 
       while (this.miniSafe) {
 
-        await this.delay(2000);
+        await this.delay(this.config.queryLoopDelay * 1000);
 
         try {
           await this.updateDeviceStateCache();
