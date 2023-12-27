@@ -2,7 +2,7 @@ import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
 import { EltakoMiniSafe2Platform } from './platform';
 import { IUpdatableAccessory } from './IUpdatableAccessory';
 
-export class EltakoSwitchAccessory implements IUpdatableAccessory {
+export class EltakoDimmerAccessory implements IUpdatableAccessory {
   private service: Service;
 
   constructor(
@@ -16,8 +16,7 @@ export class EltakoSwitchAccessory implements IUpdatableAccessory {
       .setCharacteristic(this.platform.Characteristic.SerialNumber, accessory.context.device.info.address);
 
     // https://developers.homebridge.io/#/service/Lightbulb
-    // https://developers.homebridge.io/#/service/Switch
-    const serviceType = accessory.context.device.info._target === 'light' ? this.platform.Service.Lightbulb : this.platform.Service.Switch;
+    const serviceType = this.platform.Service.Lightbulb;
 
     this.service = this.accessory.getService(serviceType) || this.accessory.addService(serviceType);
 
@@ -26,6 +25,10 @@ export class EltakoSwitchAccessory implements IUpdatableAccessory {
     this.service.getCharacteristic(this.platform.Characteristic.On)
       .onSet(this.setOn.bind(this))
       .onGet(this.getOn.bind(this));
+
+    this.service.getCharacteristic(this.platform.Characteristic.Brightness)
+      .onSet(this.setBrightness.bind(this))
+      .onGet(this.getBrightness.bind(this));
   }
 
   async setOn(value: CharacteristicValue) {
@@ -38,7 +41,17 @@ export class EltakoSwitchAccessory implements IUpdatableAccessory {
     return state?.state?.state === 'on';
   }
 
+  async setBrightness(value: CharacteristicValue) {
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, `dimTo${Number(value)}`);
+  }
+
+  getBrightness(): CharacteristicValue {
+    const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
+    return state?.state?.level ?? 0;
+  }
+
   update() {
     this.service.getCharacteristic(this.platform.Characteristic.On).updateValue(this.getOn());
+    this.service.getCharacteristic(this.platform.Characteristic.Brightness).updateValue(this.getBrightness());
   }
 }

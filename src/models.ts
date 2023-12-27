@@ -14,6 +14,7 @@ export class DeviceState {
   s1?: number;
   s2?: number;
   s3?: number;
+  level?: number;
   state?: string;
 }
 

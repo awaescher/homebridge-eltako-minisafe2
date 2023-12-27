@@ -15,6 +15,7 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
       .setCharacteristic(this.platform.Characteristic.Model, accessory.context.device.info.data)
       .setCharacteristic(this.platform.Characteristic.SerialNumber, accessory.context.device.info.address);
 
+    // https://developers.homebridge.io/#/service/WindowCovering
     const serviceType = this.platform.Service.WindowCovering;
 
     this.service = this.accessory.getService(serviceType) || this.accessory.addService(serviceType);

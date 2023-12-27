@@ -1,0 +1,84 @@
+{
+    "XC_SUC": [
+        {
+            "type": "ENOCEAN",
+            "sid": "02",
+            "adr": "FFD74XXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFC65XXX",
+            "virtual": false,
+            "data": "eltako_blind",
+            "state": {
+                "rssiPercentage": 100,
+                "pos": 0,
+                "sync": false,
+                "rv": 25,
+                "rt": 25,
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "03",
+            "adr": "FFD74XXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFC65XXX",
+            "virtual": false,
+            "data": "eltako_dimmer",
+            "state": {
+                "rssiPercentage": 100,
+                "timeout": false,
+                "state": "off",
+                "level": 0,
+                "ramp_time": 0,
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "11",
+            "adr": "FFD74XXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFC65XXX",
+            "virtual": false,
+            "data": "eltako_dimmer",
+            "state": {
+                "rssiPercentage": 0,
+                "timeout": false,
+                "state": null,
+                "level": null,
+                "ramp_time": 0,
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "1C",
+            "adr": "FFD74XXX",
+            "deviceProtocol": "normal",
+            "virtual": false,
+            "data": "eltako_powermeter",
+            "state": {
+                "rssiPercentage": 100,
+                "power": 118.0,
+                "energy": 1236500.0,
+                "energyNT": 0.0,
+                "ongoing_energy_usage": 1236500.0
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "1D",
+            "adr": "059FAXXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFC65XXX",
+            "virtual": false,
+            "data": "eltako_switch",
+            "state": {
+                "rssiPercentage": 0,
+                "state": "off",
+                "lock": false
+            }
+        }
+    ]
+}

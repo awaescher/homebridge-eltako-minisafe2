@@ -3,6 +3,7 @@ import { API, DynamicPlatformPlugin, Logger, PlatformAccessory, PlatformConfig, 
 import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
 import { EltakoSwitchAccessory } from './EltakoSwitchAccessory';
 import { EltakoBlindsAccessory } from './EltakoBlindsAccessory';
+import { EltakoDimmerAccessory } from './EltakoDimmerAccessory';
 import { MiniSafe2Api } from './MiniSafe2Api';
 import { Device } from './models';
 import { getChangedDeviceAddresses } from './StateChangeDetector';
@@ -171,6 +172,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             instance = new EltakoSwitchAccessory(this, existingAccessory);
             break;
           }
+          case 'eltako_dimmer': {
+            instance = new EltakoDimmerAccessory(this, existingAccessory);
+            break;
+          }
           case 'eltako_weather': {
             //new EltakoSwitchAccessory(this, existingAccessory);
             //break;
@@ -208,6 +213,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           }
           case 'eltako_switch': {
             instance = new EltakoSwitchAccessory(this, accessory);
+            break;
+          }
+          case 'eltako_dimmer': {
+            instance = new EltakoDimmerAccessory(this, accessory);
             break;
           }
           case 'eltako_weather': {

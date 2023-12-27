@@ -1,0 +1,139 @@
+{
+    "rooms": [
+        {
+            "name": "Flur EG",
+            "type": "floor",
+            "index": 1,
+            "order": 0
+        },
+        {
+            "name": "Esszimmer",
+            "type": "diningroom",
+            "index": 2,
+            "order": 1
+        }
+    ],
+    "devices": [
+        {
+            "name": "Jalousie",
+            "room": 1,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_blind",
+                "vendor": "eltako",
+                "address": "FFD74XXX",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFC65XXX",
+                "deviceText": "FSB14",
+                "br": "14",
+                "sid": "02",
+                "_target": "shutter"
+            },
+            "index": 1,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Spots",
+            "room": 1,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_dimmer",
+                "vendor": "eltako",
+                "address": "FFD74XXX",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFC65XXX",
+                "deviceText": "FUD14",
+                "br": "14",
+                "sid": "03",
+                "_target": "light"
+            },
+            "index": 2,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Eltako Messzähler",
+            "room": 14,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_powermeter",
+                "vendor": "eltako",
+                "address": "FFD74XXX",
+                "gateway": 1,
+                "virtual": false,
+                "deviceText": "DSZ14",
+                "br": "14",
+                "sid": "1C",
+                "_target": "meter"
+            },
+            "index": 27,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Garagentor",
+            "room": 15,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_switch",
+                "vendor": "eltako",
+                "address": "059FAXXX",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFC65XXX",
+                "deviceText": "FSR61-230V",
+                "br": "61",
+                "sid": "1D",
+                "_target": "switch"
+            },
+            "index": 28,
+            "cloud": {
+                "enabled": true
+            }
+        }
+    ],
+    "gateways": [
+        {
+            "name": "MINISAFE2",
+            "index": 1,
+            "info": {
+                "ip": "192.168.XXX.XXX",
+                "sn": "255.255.XXX.XXX",
+                "dns": "192.168.XXX.XXX",
+                "mac": "XX-XX-XX-XX-XX-XX",
+                "hwv": "C2",
+                "vid": "XXXX",
+                "sys": "aio",
+                "name": "MINISAFE2",
+                "dhcp": "TRUE",
+                "server": "m1.cloud.eltako.com:80",
+                "version": "C2",
+                "gateway_vendor": "mediola",
+                "firmware": "1.24.1",
+                "_primary": true,
+                "sid": "XXX",
+                "_token": "XXX",
+                "password": "",
+                "_rcs": false
+            }
+        }
+    ],
+    "qrcodes": [],
+    "actionlists": [],
+    "schedules": [],
+    "actions": []
+}
