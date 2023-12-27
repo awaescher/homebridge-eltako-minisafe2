@@ -87,7 +87,11 @@ The MiniSafe2 does not support active change notifications, that's why values ha
 
 The official GFA5 app is not faster, though. According to the network traffic it causes, it has to rely on these heavy polls, too.
 
-## Uncommunicative devices 
+## Slow mass operations
+
+If the MiniSafe2 manages a lot of devices, setting the states of many devices at once can be slow. For example, "Hey Siri, turn off all the lights" might take a while to be fully processed if your home setup contains many lights. It seems that the MiniSafe2 has to process all incoming request sequentially.
+
+## Uncommunicative blinds 
 
 Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
 
