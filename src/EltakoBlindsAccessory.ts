@@ -53,6 +53,7 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
   async setTargetPosition(value: CharacteristicValue) {
     const eltakoValue = this.transformToEltako(value);
     this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Target Position ${value} (Eltako ${eltakoValue})`);
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, 'stop');
     await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, `moveTo${eltakoValue}`);
   }
 
