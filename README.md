@@ -8,8 +8,8 @@
 
 This plugin adds the devices from your [Eltako MiniSafe2](https://www.eltako.com/en/product/professional-smart-home-en/controllers-and-gateways-enocean-zigbee-knx-dali-mqtt-and-much-more/minisafe2/) to Apple HomeKit.
 
-![GFA5 app and the Eltako MiniSafe2](docs/GFA5+MiniSafe2.png)
-Image by [Eltako GmbH](https://www.eltako.com/)
+![GFA5 and HomeKit app](docs/Header.png)
+Image by [R Architecture on Unsplash](https://unsplash.com/de/fotos/brauner-holzsitz-neben-weissem-holztisch-TRCJ-87Yoh0)
 
 # Requirements
 
