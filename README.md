@@ -11,6 +11,15 @@ This plugin adds the devices from your [Eltako MiniSafe2](https://www.eltako.com
 ![GFA5 and HomeKit app](docs/Header.png)
 Image by [R Architecture on Unsplash](https://unsplash.com/de/fotos/brauner-holzsitz-neben-weissem-holztisch-TRCJ-87Yoh0)
 
+# Why?
+
+Bringing your devices to HomeKit will open up the door to a lot of features without any additional effort:
+- control your devices from anywhere in the world without using a VPN and without opening any router ports
+- control your devices with Siri on your iPhone, iPad, Mac, Apple Watch, HomePod, Apple TV etc.
+- control your devices with HomeKit scenes and combine them with other HomeKit devices
+- control your devices from [widgets](https://support.apple.com/en-us/HT207122) and [shortcuts](https://support.apple.com/en-us/guide/shortcuts/welcome/ios)
+- control your devices in logical groups, like _"turn off all lights in the living room"_ or _"lock every door"_
+
 # Requirements
 
 If you have your home setup up and running in the [Eltako GFA5](https://apps.apple.com/app/eltako-gfa5/id1555852467) app and you want to control your devices with Apple HomeKit, this is the right plugin for you.
