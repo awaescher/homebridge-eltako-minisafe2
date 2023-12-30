@@ -27,12 +27,15 @@ If you don't have a MiniSafe2 in your network, this plugin won't be able to cont
 
 Right now, the following devices are supported:
 
-|Device|Tag "data"|HomeKit service|Comment
-|-|-|-|-|
-|Blind|`eltako_blind`, `eltako_tf_blind`|Window Covering||
-|Dimmer|`eltako_dimmer`|Lightbulb||
-|Switch|`eltako_switch`|Switch/Lightbulb|HomeKit service depending on the devices' `target`, which can be configured in the GFA5 app
-|Weather|`eltako_weather`|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
+|Device (tag "data")|HomeKit service|Comment
+|-|-|-|
+|`eltako_blind` `eltako_tf_blind`|[Window Covering](https://developers.homebridge.io/#/service/WindowCovering)||
+|`eltako_dimmer`|[Lightbulb](https://developers.homebridge.io/#/service/Lightbulb)||
+|`eltako_switch`|[Switch](https://developers.homebridge.io/#/service/Switch) or [Lightbulb](https://developers.homebridge.io/#/service/Lightbulb)|HomeKit service depending on the devices' `target`, which can be configured in the GFA5 app
+|`a5-04-02`| [TemperatureSensor](https://developers.homebridge.io/#/service/TemperatureSensor) and [HumiditySensor](https://developers.homebridge.io/#/service/HumiditySensor)|[Currently in discussion](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/3#issuecomment-1872514207)
+|`eltako_tf_lux`|[Light sensor](https://developers.homebridge.io/#/service/LightSensor)|[Currently in discussion](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/3#issuecomment-1872514207)
+|`eltako_fhk`|[Thermostat](https://developers.homebridge.io/#/service/Thermostat)|[Currently in discussion](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/3#issuecomment-1872514207)
+|`eltako_weather`|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
 
 I don't have any other devices to test. Donations welcome 😉
 
