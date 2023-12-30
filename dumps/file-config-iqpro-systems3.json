@@ -1,0 +1,159 @@
+{
+    "rooms": [
+        {
+            "name": "Küche",
+            "type": "diningroom",
+            "index": 1,
+            "order": 10
+        },
+        {
+            "name": "Schlafzimmer",
+            "type": "bedroom",
+            "index": 2,
+            "order": 1
+        }
+    ],
+    "devices": [
+        {
+            "name": "Jalousie Küche",
+            "room": 1,
+            "info": {
+                "op": "",
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_tf_blind",
+                "vendor": "eltako",
+                "address": "051ADC47",
+                "gateway": 1,
+                "virtual": "",
+                "senderID": "FFD4758D",
+                "deviceProtocol": "normal",
+                "sid": "01",
+                "__neoIndex": 1
+            },
+            "index": 1,
+            "cloud": {
+                "enabled": true
+            },
+            "order": 0
+        },
+        {
+            "name": "Heizung WC",
+            "room": 7,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_fhk",
+                "vendor": "eltako",
+                "address": "0597521A",
+                "gateway": 1,
+                "virtual": false,
+                "senderID": "FFD475A9",
+                "deviceText": "FHK61 ab 09/19",
+                "br": "61",
+                "sid": "10",
+                "_hasOperationMode": true,
+                "__neoIndex": 16
+            },
+            "index": 16,
+            "cloud": {
+                "enabled": true
+            },
+            "order": 1
+        },
+        {
+            "name": "Eltako Temperatursensor",
+            "room": 15,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "a5-04-02",
+                "vendor": "eltako",
+                "address": "051EDDC1",
+                "gateway": 1,
+                "virtual": false,
+                "sid": "28",
+                "_target": "temp",
+                "_isFav": true,
+                "_favOrder": 0,
+                "__neoIndex": 29
+            },
+            "index": 29,
+            "cloud": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "Eltako Helligkeitssensor",
+            "room": 15,
+            "info": {
+                "op": 0,
+                "sys": "aio",
+                "type": "ENOCEAN",
+                "data": "eltako_tf_lux",
+                "vendor": "eltako",
+                "address": "05A00675",
+                "gateway": 1,
+                "virtual": false,
+                "sid": "29",
+                "_target": "brightness",
+                "_isFav": true,
+                "_favOrder": 1
+            },
+            "index": 30,
+            "cloud": {
+                "enabled": true
+            }
+        }
+    ],
+    "gateways": [
+        {
+            "name": "MiniSafe2",
+            "index": 1,
+            "info": {
+                "ip": "XXX",
+                "sn": "XXX",
+                "dns": "XXX",
+                "mac": "XXX",
+                "hwv": "C2",
+                "vid": "000C",
+                "sys": "aio",
+                "name": "MiniSafe2",
+                "dhcp": "TRUE",
+                "server": "m1.cloud.eltako.com:80",
+                "version": "C2",
+                "gateway_vendor": "mediola",
+                "password": "XXX",
+                "firmware": "1.25.2",
+                "sid": "XXX",
+                "_token": "XXX",
+                "_cloudAccessActive": true,
+                "__neoIndex": 1,
+                "_primary": true,
+                "_rcs": true,
+                "_showHiddenRules": false
+            },
+            "tasks": []
+        },
+        {
+            "name": "CloudService",
+            "index": 2,
+            "info": {
+                "sys": "cloudservice",
+                "username": "XXX",
+                "password": "XXX",
+                "ip": "m0.cloud.eltako.com",
+                "moduleInfo": {
+                    "hue": {
+                        "domain": "hue.cloud.eltako.com:443"
+                    },
+                    "doorbird": {
+                        "domain": "doorbird.cloud.eltako.com:443"
+                    }
+                }
+            }
+        }
+    ]
+}

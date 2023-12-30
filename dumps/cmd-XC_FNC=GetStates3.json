@@ -1,0 +1,77 @@
+{
+    "XC_SUC": [
+        {
+            "type": "ENOCEAN",
+            "sid": "01",
+            "adr": "051ADXXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFD47XXX",
+            "virtual": false,
+            "data": "eltako_tf_blind",
+            "state": {
+                "rssiPercentage": 17,
+                "pos": 100,
+                "sync": true,
+                "rv": 20,
+                "rt": 20,
+                "lock": false
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "10",
+            "adr": "05975XXX",
+            "deviceProtocol": "normal",
+            "senderID": "FFD47XXX",
+            "virtual": false,
+            "data": "eltako_fhk",
+            "state": {
+                "rssiPercentage": 11,
+                "mode": "cent",
+                "setpoint": 19.0,
+                "actualSetPoint": 19.0,
+                "state": 19.0,
+                "temperature": 20.5,
+                "operation_mode": "off"
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "11",
+            "adr": "05975XXX:0",
+            "deviceProtocol": "normal",
+            "senderID": "FFD47XXX",
+            "virtual": false,
+            "data": "eltako_fhk",
+            "state": {
+                "rssiPercentage": 11
+            },
+            "mainId": "10"
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "29",
+            "adr": "05A00XXX",
+            "deviceProtocol": "normal",
+            "virtual": false,
+            "data": "eltako_tf_lux",
+            "state": {
+                "rssiPercentage": 17,
+                "illumination": 0.0
+            }
+        },
+        {
+            "type": "ENOCEAN",
+            "sid": "28",
+            "adr": "051EDXXX",
+            "deviceProtocol": "normal",
+            "virtual": false,
+            "data": "a5-04-02",
+            "state": {
+                "rssiPercentage": 15,
+                "temperature": 6.5,
+                "humidity": 94
+            }
+        }
+    ]
+}

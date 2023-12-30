@@ -164,7 +164,8 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         let instance: IUpdatableAccessory | null = null;
 
         switch (deviceType) {
-          case 'eltako_blind': {
+          case 'eltako_blind':
+          case 'eltako_tf_blind': {
             instance = new EltakoBlindsAccessory(this, existingAccessory);
             break;
           }
@@ -175,11 +176,6 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           case 'eltako_dimmer': {
             instance = new EltakoDimmerAccessory(this, existingAccessory);
             break;
-          }
-          case 'eltako_weather': {
-            //new EltakoSwitchAccessory(this, existingAccessory);
-            //break;
-            continue;
           }
         }
 
@@ -207,7 +203,8 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         // create the accessory handler for the newly create accessory
         // this is imported from `platformAccessory.ts`
         switch (deviceType) {
-          case 'eltako_blind': {
+          case 'eltako_blind':
+          case 'eltako_tf_blind': {
             instance = new EltakoBlindsAccessory(this, accessory);
             break;
           }
@@ -218,11 +215,6 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           case 'eltako_dimmer': {
             instance = new EltakoDimmerAccessory(this, accessory);
             break;
-          }
-          case 'eltako_weather': {
-            //new EltakoSwitchAccessory(this, accessory);
-            //break;
-            continue;
           }
         }
 

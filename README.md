@@ -29,9 +29,9 @@ Right now, the following devices are supported:
 
 |Device|Tag "data"|HomeKit service|Comment
 |-|-|-|-|
+|Blind|`eltako_blind`, `eltako_tf_blind`|Window Covering||
+|Dimmer|`eltako_dimmer`|Lightbulb||
 |Switch|`eltako_switch`|Switch/Lightbulb|HomeKit service depending on the devices' `target`, which can be configured in the GFA5 app
-|Blind|`eltako_blind`|Window Covering||
-|*Dimmer*|`eltako_dimmer`|*Lightbulb*|*__Experimental__. Implemented on good luck, I have no installed device to test. __Feedback appreciated.__*|
 |Weather|`eltako_weather`|-|Eltako uses weather data from [openweathermap.org](https://openweathermap.org). Use [homebridge-weather-plus](https://www.npmjs.com/package/homebridge-weather-plus) instead, as it makes use of the same data but offers many more features|
 
 I don't have any other devices to test. Donations welcome 😉
