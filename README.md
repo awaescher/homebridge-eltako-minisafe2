@@ -48,6 +48,36 @@ Right now, the following devices are supported:
 
 I don't have any other devices to test. Donations welcome 😉
 
+# FAQ
+
+## Can I rename devices in HomeKit?
+
+Yes, this plugin uses the [devices' unique addresses](https://github.com/awaescher/homebridge-eltako-minisafe2/blob/e5a77008cca516e5d79038ba9dc688a794019892/src/platform.ts#L149) to reference them. This means that the name in the Eltako- and in the HomeKit-app can be changed at any time with no side effects. When the plugin adds the device to HomeKit for the very first time, the name from the MiniSafe2 config is used but you can change it at any time in HomeKit.
+
+## Is this plugin compatible with other bridges?
+
+As far as I could find out, the [Mediola V6 Mini](https://www.mediola.com/wp-content/uploads/datenblatt_V6-Mini_V6-Mini_E_Rev1_2019.pdf) is using the same design as the MiniSafe2 internally and should therefore work. Mediola has other bridges available which might not be compatible. 
+
+While it looks pretty much the same on first sight, I was told that the [wibutler](https://shop.wibutler.com/zentrale/) is not compatible to the MiniSafe2 design.
+
+If you have a bridge from Mediola, wibutler or any other manufacturer I don't know yet, I'd be happy to hear your feedback.
+
+# Limitations
+
+## Constant polling
+
+The MiniSafe2 does not support active change notifications, that's why values have to be polled regularly. In addition to this, the MiniSafe2 does not allow to poll the state of specific devices but returns the state of every single device for every poll. These polls can get really huge and take up to a few seconds, which leads to a small delay to recognize state changes from outside of HomeKit.
+
+The official GFA5 app is not faster, though. According to the network traffic it causes, it has to rely on these heavy polls, too.
+
+## Slow mass operations ([#4](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/4))
+
+If the MiniSafe2 manages a lot of devices, setting the states of many devices at once can be slow. For example, "Hey Siri, turn off all the lights" might take a while to be fully processed if your home setup contains many lights. It seems that the MiniSafe2 has to process all incoming request sequentially.
+
+## Uncommunicative blinds 
+
+Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
+
 # Endpoints
 
 I managed to reverse engineer some api endpoints the GFA5 app is using. The complete URL is always the IP address of the MiniSafe2, a route from the table below plus either the device password with &`XC_PASS=...` or an access token with `&at=...`. 
@@ -90,22 +120,6 @@ For switches, the GFA5 app always sends the `toggle` command. However, `on` and 
 Everything I know about the MiniSafe2 api comes entirely from reverse engineering. That way I can only provide the information that my setup delivers. This means that neither the API endpoints nor the parameters are complete. Please let me know if you find official resources or get answers from Eltako. 
 
 It would also be very helpful if you could provide me with data from your setups (anonymized of course, be careful with access tokens in the URLs). I could collect these next to [my dumps in this repository](https://github.com/awaescher/homebridge-eltako-minisafe2/tree/latest/dumps).
-
-# Limitations
-
-## Constant polling
-
-The MiniSafe2 does not support active change notifications, that's why values have to be polled regularly. In addition to this, the MiniSafe2 does not allow to poll the state of specific devices but returns the state of every single device for every poll. These polls can get really huge and take up to a few seconds, which leads to a small delay to recognize state changes from outside of HomeKit.
-
-The official GFA5 app is not faster, though. According to the network traffic it causes, it has to rely on these heavy polls, too.
-
-## Slow mass operations ([#4](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/4))
-
-If the MiniSafe2 manages a lot of devices, setting the states of many devices at once can be slow. For example, "Hey Siri, turn off all the lights" might take a while to be fully processed if your home setup contains many lights. It seems that the MiniSafe2 has to process all incoming request sequentially.
-
-## Uncommunicative blinds 
-
-Blinds will only report their absolute position once they stopped. They won't provide any target values or their current state (going up, going down, stopped).
 
 # Disclaimer
 
