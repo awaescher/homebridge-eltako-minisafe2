@@ -36,7 +36,7 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
   }
 
   async setCurrentPosition(value: CharacteristicValue) {
-    const eltakoValue = this.transformToEltako(value);
+    const eltakoValue = this.invertPercent(value);
     this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Current Position ${value} (Eltako ${eltakoValue})`);
     //unused: await this.platform.miniSafe.setState(this.accessory.context.device.info.sid, 'on');
   }
@@ -45,13 +45,13 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
 
     const value = state?.state?.pos ?? 0;
-    const eltakoValue = this.transformToEltako(value);
+    const eltakoValue = this.invertPercent(value);
 
     return eltakoValue;
   }
 
   async setTargetPosition(value: CharacteristicValue) {
-    const eltakoValue = this.transformToEltako(value);
+    const eltakoValue = this.invertPercent(value);
     this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Target Position ${value} (Eltako ${eltakoValue})`);
     await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, 'stop');
     await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, `moveTo${eltakoValue}`);
@@ -60,7 +60,7 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
   getTargetPosition(): CharacteristicValue {
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
     const value = state?.state?.pos ?? 0;
-    const eltakoValue = this.transformToEltako(value);
+    const eltakoValue = this.invertPercent(value);
     return eltakoValue;
   }
 
@@ -79,8 +79,19 @@ export class EltakoBlindsAccessory implements IUpdatableAccessory {
     this.service.getCharacteristic(this.platform.Characteristic.PositionState).updateValue(this.getPositionState());
   }
 
-  transformToEltako(value: CharacteristicValue) : number {
+  invertPercent(value: CharacteristicValue) : number {
+
+    let num = Number(value);
+
+    // treat 1% as 0% and 99% as 100% to prevent blinds not being recognized as open/closed by this tiny difference
+    // https://github.com/awaescher/homebridge-eltako-minisafe2/issues/3#issuecomment-1880151317
+    if (num <= 1) {
+      num = 0;
+    } else if (num >= 99) {
+      num = 100;
+    }
+
     // 10% open in Homebridge means 90% open in Eltako
-    return 100 - Number(value);
+    return 100 - num;
   }
 }
