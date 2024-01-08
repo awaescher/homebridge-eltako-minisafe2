@@ -18,7 +18,6 @@ export class EltakoSwitchAccessory implements IUpdatableAccessory {
     // https://developers.homebridge.io/#/service/Lightbulb
     // https://developers.homebridge.io/#/service/Switch
     const serviceType = accessory.context.device.info._target === 'light' ? this.platform.Service.Lightbulb : this.platform.Service.Switch;
-
     this.service = this.accessory.getService(serviceType) || this.accessory.addService(serviceType);
 
     this.service.setCharacteristic(this.platform.Characteristic.Name, accessory.context.device.name);
