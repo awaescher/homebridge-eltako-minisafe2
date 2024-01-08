@@ -10,6 +10,7 @@ import { MiniSafe2Api } from './MiniSafe2Api';
 import { Device } from './models';
 import { getChangedDeviceAddresses } from './StateChangeDetector';
 import { IUpdatableAccessory } from './IUpdatableAccessory';
+import { EltakoThermostatAccessory } from './EltakoThermostatAccessory';
 
 /**
  * HomebridgePlatform
@@ -189,6 +190,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             instance = new EltakoLightSensorAccessory(this, existingAccessory);
             break;
           }
+          case 'eltako_fhk': {
+            instance = new EltakoThermostatAccessory(this, existingAccessory);
+            break;
+          }
         }
 
         if (instance) {
@@ -236,6 +241,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           }
           case 'eltako_tf_lux': {
             instance = new EltakoLightSensorAccessory(this, accessory);
+            break;
+          }
+          case 'eltako_fhk': {
+            instance = new EltakoThermostatAccessory(this, accessory);
             break;
           }
         }

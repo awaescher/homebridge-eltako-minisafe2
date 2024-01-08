@@ -17,7 +17,6 @@ export class EltakoDimmerAccessory implements IUpdatableAccessory {
 
     // https://developers.homebridge.io/#/service/Lightbulb
     const serviceType = this.platform.Service.Lightbulb;
-
     this.service = this.accessory.getService(serviceType) || this.accessory.addService(serviceType);
 
     this.service.setCharacteristic(this.platform.Characteristic.Name, accessory.context.device.name);

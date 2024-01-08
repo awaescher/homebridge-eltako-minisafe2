@@ -17,6 +17,7 @@ export class DeviceState {
   s3?: number;
   level?: number;
   state?: string;
+  operation_mode?: string;
 }
 
 export interface Device {
