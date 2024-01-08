@@ -11,7 +11,7 @@ This plugin adds the devices from your [Eltako MiniSafe2](https://www.eltako.com
 > If you like this plugin, please leave a star ⭐
 
 ![GFA5 and HomeKit app](docs/Header.png)
-Image by [R Architecture on Unsplash](https://unsplash.com/de/fotos/brauner-holzsitz-neben-weissem-holztisch-TRCJ-87Yoh0)
+Background image by [R Architecture on Unsplash](https://unsplash.com/de/fotos/brauner-holzsitz-neben-weissem-holztisch-TRCJ-87Yoh0)
 
 # Why?
 
