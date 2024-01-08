@@ -46,7 +46,12 @@ export class EltakoTemperatureAndHumiditySensorAccessory implements IUpdatableAc
   }
 
   update() {
-    this.humidityService.getCharacteristic(this.platform.Characteristic.CurrentRelativeHumidity).updateValue(this.getCurrentRelativeHumidity());
-    this.temperatureService.getCharacteristic(this.platform.Characteristic.CurrentTemperature).updateValue(this.getCurrentTemperature());
+    this.humidityService
+      .getCharacteristic(this.platform.Characteristic.CurrentRelativeHumidity)
+      .updateValue(this.getCurrentRelativeHumidity());
+
+    this.temperatureService
+      .getCharacteristic(this.platform.Characteristic.CurrentTemperature)
+      .updateValue(this.getCurrentTemperature());
   }
 }
