@@ -1,9 +1,10 @@
 import { API, DynamicPlatformPlugin, Logger, PlatformAccessory, PlatformConfig, Service, Characteristic } from 'homebridge';
 
 import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
-import { EltakoSwitchAccessory } from './EltakoSwitchAccessory';
 import { EltakoBlindsAccessory } from './EltakoBlindsAccessory';
 import { EltakoDimmerAccessory } from './EltakoDimmerAccessory';
+import { EltakoLightSensorAccessory } from './EltakoLightSensorAccessory';
+import { EltakoSwitchAccessory } from './EltakoSwitchAccessory';
 import { EltakoTemperatureAndHumiditySensorAccessory } from './EltakoTemperatureAndHumiditySensorAccessory';
 import { MiniSafe2Api } from './MiniSafe2Api';
 import { Device } from './models';
@@ -184,6 +185,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             instance = new EltakoDimmerAccessory(this, existingAccessory);
             break;
           }
+          case 'eltako_tf_lux': {
+            instance = new EltakoLightSensorAccessory(this, existingAccessory);
+            break;
+          }
         }
 
         if (instance) {
@@ -227,6 +232,10 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
           }
           case 'eltako_dimmer': {
             instance = new EltakoDimmerAccessory(this, accessory);
+            break;
+          }
+          case 'eltako_tf_lux': {
+            instance = new EltakoLightSensorAccessory(this, accessory);
             break;
           }
         }
