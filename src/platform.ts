@@ -4,6 +4,7 @@ import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
 import { EltakoSwitchAccessory } from './EltakoSwitchAccessory';
 import { EltakoBlindsAccessory } from './EltakoBlindsAccessory';
 import { EltakoDimmerAccessory } from './EltakoDimmerAccessory';
+import { EltakoTemperatureAndHumiditySensorAccessory } from './EltakoTemperatureAndHumiditySensorAccessory';
 import { MiniSafe2Api } from './MiniSafe2Api';
 import { Device } from './models';
 import { getChangedDeviceAddresses } from './StateChangeDetector';
@@ -164,6 +165,12 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         let instance: IUpdatableAccessory | null = null;
 
         switch (deviceType) {
+          case 'a5-04-01':
+          case 'a5-04-02':
+          case 'a5-04-03': {
+            instance = new EltakoTemperatureAndHumiditySensorAccessory(this, existingAccessory);
+            break;
+          }
           case 'eltako_blind':
           case 'eltako_tf_blind': {
             instance = new EltakoBlindsAccessory(this, existingAccessory);
@@ -203,6 +210,12 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
         // create the accessory handler for the newly create accessory
         // this is imported from `platformAccessory.ts`
         switch (deviceType) {
+          case 'a5-04-01':
+          case 'a5-04-02':
+          case 'a5-04-03': {
+            instance = new EltakoTemperatureAndHumiditySensorAccessory(this, accessory);
+            break;
+          }
           case 'eltako_blind':
           case 'eltako_tf_blind': {
             instance = new EltakoBlindsAccessory(this, accessory);

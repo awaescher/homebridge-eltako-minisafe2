@@ -9,6 +9,7 @@ export class DeviceState {
   timeout?: boolean;
   illumination?: number;
   temperature?: number;
+  humidity?: number;
   wind?: number;
   rain_state?: boolean;
   s1?: number;
