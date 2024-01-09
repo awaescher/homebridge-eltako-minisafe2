@@ -59,6 +59,23 @@ export class MiniSafe2Api {
     await axios.post(url, payload);
   }
 
+  async sendGenericCommandWithValue(sid: string, command: string, value: string) {
+
+    const payload =
+    {
+      XC_FNC: 'SendGenericCmd',
+      id: sid,
+      data:
+      {
+        cmd: `${command}`,
+        value: `${value}`,
+      },
+    };
+
+    const url = this.buildUrl('/cmd');
+    await axios.post(url, payload);
+  }
+
   buildUrl(route: string) {
 
     const separator = route.includes('?') ? '&' : '?';

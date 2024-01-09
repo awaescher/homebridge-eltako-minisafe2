@@ -61,8 +61,8 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   }
 
   async setCurrentHeatingCoolingState(value: CharacteristicValue) {
-    const command = value === this.platform.Characteristic.CurrentHeatingCoolingState.OFF ? 'off' : 'on';
-    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
+    const operationMode = value === this.platform.Characteristic.CurrentHeatingCoolingState.OFF ? 'off' : 'on';
+    await this.platform.miniSafe.sendGenericCommandWithValue(this.accessory.context.device.info.sid, 'operation_mode', operationMode);
   }
 
   getTargetTemperature(): CharacteristicValue {
