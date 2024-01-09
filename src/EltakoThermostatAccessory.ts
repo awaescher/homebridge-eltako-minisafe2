@@ -25,7 +25,19 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
       .onGet(this.getCurrentTemperature.bind(this));
 
     this.service.getCharacteristic(this.platform.Characteristic.CurrentHeatingCoolingState)
-      .onGet(this.getCurrentHeatingCoolingState.bind(this));
+      .onGet(this.getCurrentHeatingCoolingState.bind(this))
+      .onSet(this.setCurrentHeatingCoolingState.bind(this))
+      .setProps({
+        validValues: [
+          this.platform.Characteristic.CurrentHeatingCoolingState.OFF,
+          this.platform.Characteristic.CurrentHeatingCoolingState.HEAT,
+        ],
+        maxValue: this.platform.Characteristic.CurrentHeatingCoolingState.HEAT,
+      });
+
+    this.service.getCharacteristic(this.platform.Characteristic.TargetTemperature)
+      .onGet(this.getTargetTemperature.bind(this))
+      .onSet(this.setTargetTemperature.bind(this));
 
     this.service.getCharacteristic(this.platform.Characteristic.TemperatureDisplayUnits)
       .onGet(this.getTemperatureDisplayUnits.bind(this));
@@ -51,6 +63,23 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
     return this.platform.Characteristic.CurrentHeatingCoolingState.HEAT;
   }
 
+  async setCurrentHeatingCoolingState(value: CharacteristicValue) {
+    // TODO
+    // const command = value ? 'on' : 'off'; // valid commands: 'on' 'off' 'toggle'
+    // await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
+  }
+
+  getTargetTemperature(): CharacteristicValue {
+    const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
+    return state?.state?.setpoint ?? 0;
+  }
+
+  async setTargetTemperature(value: CharacteristicValue) {
+    // TODO
+    // const command = value ? 'on' : 'off'; // valid commands: 'on' 'off' 'toggle'
+    // await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
+  }
+
   getTemperatureDisplayUnits(): CharacteristicValue {
     return this.platform.Characteristic.TemperatureDisplayUnits.CELSIUS;
   }
@@ -63,6 +92,10 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
     this.service
       .getCharacteristic(this.platform.Characteristic.CurrentHeatingCoolingState)
       .updateValue(this.getCurrentHeatingCoolingState());
+
+    this.service
+      .getCharacteristic(this.platform.Characteristic.TargetTemperature)
+      .updateValue(this.getTargetTemperature());
 
     this.service
       .getCharacteristic(this.platform.Characteristic.TemperatureDisplayUnits)

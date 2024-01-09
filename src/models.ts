@@ -15,6 +15,8 @@ export class DeviceState {
   s1?: number;
   s2?: number;
   s3?: number;
+  setpoint?: number;
+  actualSetpoint?: number;
   level?: number;
   state?: string;
   operation_mode?: string;
