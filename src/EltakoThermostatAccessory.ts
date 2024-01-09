@@ -71,7 +71,7 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   }
 
   async setTargetTemperature(value: CharacteristicValue) {
-    const command = `setTo${value}`;
+    const command = `tempTo${value}`;
     this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Target Temperature to ${value} with command ` + command);
     await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
   }
