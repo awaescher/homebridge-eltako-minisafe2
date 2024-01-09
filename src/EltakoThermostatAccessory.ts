@@ -53,9 +53,6 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
     const mode = state?.state?.operation_mode ?? '';
 
-    // return OFF/HEAT/COOL
-    // possible states? What about COOL?!
-
     if (mode === 'off') {
       return this.platform.Characteristic.CurrentHeatingCoolingState.OFF;
     }
@@ -64,9 +61,8 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   }
 
   async setCurrentHeatingCoolingState(value: CharacteristicValue) {
-    // TODO
-    // const command = value ? 'on' : 'off'; // valid commands: 'on' 'off' 'toggle'
-    // await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
+    const command = value === this.platform.Characteristic.CurrentHeatingCoolingState.OFF ? 'off' : 'on';
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
   }
 
   getTargetTemperature(): CharacteristicValue {
@@ -75,9 +71,9 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   }
 
   async setTargetTemperature(value: CharacteristicValue) {
-    // TODO
-    // const command = value ? 'on' : 'off'; // valid commands: 'on' 'off' 'toggle'
-    // await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
+    const command = `setTo${value}`;
+    this.platform.log.debug(`Set ${this.accessory.context.device.info.sid} Target Temperature to ${value} with command ` + command);
+    await this.platform.miniSafe.sendGenericCommand(this.accessory.context.device.info.sid, command);
   }
 
   getTemperatureDisplayUnits(): CharacteristicValue {
