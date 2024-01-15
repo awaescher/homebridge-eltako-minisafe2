@@ -35,6 +35,17 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
         maxValue: this.platform.Characteristic.CurrentHeatingCoolingState.HEAT,
       });
 
+    this.service.getCharacteristic(this.platform.Characteristic.TargetHeatingCoolingState)
+      .onGet(this.getTargetHeatingCoolingState.bind(this))
+      .onSet(this.setTargetHeatingCoolingState.bind(this))
+      .setProps({
+        validValues: [
+          this.platform.Characteristic.TargetHeatingCoolingState.OFF,
+          this.platform.Characteristic.TargetHeatingCoolingState.HEAT,
+        ],
+        maxValue: this.platform.Characteristic.TargetHeatingCoolingState.HEAT,
+      });
+
     this.service.getCharacteristic(this.platform.Characteristic.TargetTemperature)
       .onGet(this.getTargetTemperature.bind(this))
       .onSet(this.setTargetTemperature.bind(this));
@@ -49,7 +60,6 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   }
 
   getCurrentHeatingCoolingState(): CharacteristicValue {
-
     const state = this.platform.deviceStateCache.find(s => s.sid === this.accessory.context.device.info.sid);
     const mode = state?.state?.operation_mode ?? '';
 
@@ -63,6 +73,14 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
   async setCurrentHeatingCoolingState(value: CharacteristicValue) {
     const operationMode = value === this.platform.Characteristic.CurrentHeatingCoolingState.OFF ? 'off' : 'on';
     await this.platform.miniSafe.sendGenericCommandWithValue(this.accessory.context.device.info.sid, 'operation_mode', operationMode);
+  }
+
+  getTargetHeatingCoolingState(): CharacteristicValue {
+    return this.getCurrentHeatingCoolingState();
+  }
+
+  async setTargetHeatingCoolingState(value: CharacteristicValue) {
+    this.setCurrentHeatingCoolingState(value);
   }
 
   getTargetTemperature(): CharacteristicValue {
@@ -88,6 +106,10 @@ export class EltakoThermostatAccessory implements IUpdatableAccessory {
     this.service
       .getCharacteristic(this.platform.Characteristic.CurrentHeatingCoolingState)
       .updateValue(this.getCurrentHeatingCoolingState());
+
+    this.service
+      .getCharacteristic(this.platform.Characteristic.TargetHeatingCoolingState)
+      .updateValue(this.getTargetHeatingCoolingState());
 
     this.service
       .getCharacteristic(this.platform.Characteristic.TargetTemperature)
