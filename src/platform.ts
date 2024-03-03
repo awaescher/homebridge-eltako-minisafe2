@@ -178,10 +178,7 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             instance = new EltakoBlindsAccessory(this, existingAccessory);
             break;
           }
-          case 'eltako_switch': {
-            instance = new EltakoSwitchAccessory(this, existingAccessory);
-            break;
-          }
+          case 'eltako_switch':
           case 'eltako_fsr14': {
             instance = new EltakoSwitchAccessory(this, existingAccessory);
             break;
@@ -239,10 +236,7 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
             instance = new EltakoSwitchAccessory(this, accessory);
             break;
           }
-          case 'eltako_dimmer': {
-            instance = new EltakoDimmerAccessory(this, accessory);
-            break;
-          }
+          case 'eltako_dimmer':
           case 'eltako_fsr14': {
             instance = new EltakoSwitchAccessory(this, accessory);
             break;
