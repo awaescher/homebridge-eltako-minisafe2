@@ -92,6 +92,8 @@ Example:
 http://192.168.178.123/cmd?XC_FNC=GetStates&XC_PASS=MyKillerPassword 
 ```
 
+> **Note:** Newer firmwares with activated Eltako cloud access (seen with C2/1.26.5) additionally require `XC_USER=...` with the e-mail address of the Eltako account. Without it, every request is answered with `{"XC_ERR":{"code":"000007","msg":"access denied"}}` — see [#17](https://github.com/awaescher/homebridge-eltako-minisafe2/issues/17). The plugin supports this with the optional `username` setting. Username and password have to be url-encoded if they contain special characters, the plugin does this automatically.
+
 The GFA5 app is using the access token instead of the password. You can sniff your network traffic for the access token but I don't know how long it will be valid.
 
 |Route|Function|

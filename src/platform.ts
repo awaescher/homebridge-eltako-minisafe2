@@ -48,7 +48,7 @@ export class EltakoMiniSafe2Platform implements DynamicPlatformPlugin {
       this.log.info('Connecting to Eltako MiniSafe2 on ' + this.config.ip);
 
       try {
-        this.miniSafe = new MiniSafe2Api(this.config.ip, this.config.password, this.config.accessToken);
+        this.miniSafe = new MiniSafe2Api(this.config.ip, this.config.password, this.config.accessToken, this.config.username);
         await this.updateDeviceStateCache();
         await this.discoverDevices();
       } catch (e) {

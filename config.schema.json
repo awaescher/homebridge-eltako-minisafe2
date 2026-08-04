@@ -18,6 +18,13 @@
         "required": true,
         "placeholder": "192.168.1.1"
       },
+      "username": {
+        "title": "The username (Eltako account e-mail) to access the MiniSafe2",
+        "description": "Required on newer firmwares if cloud access is activated - the MiniSafe2 then expects XC_USER in addition to the password.",
+        "type": "string",
+        "required": false,
+        "default": ""
+      },
       "password": {
         "title": "The password to access the MiniSafe2",
         "description": "Can be left empty if an access token is used",
