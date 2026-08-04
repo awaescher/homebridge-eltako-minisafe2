@@ -7,7 +7,7 @@
   "homepage": "https://github.com/awaescher/homebridge-eltako-minisafe2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/awaescher/homebridge-eltako-minisafe2"
+    "url": "git+https://github.com/awaescher/homebridge-eltako-minisafe2.git"
   },
   "bugs": {
     "url": "https://github.com/awaescher/homebridge-eltako-minisafe2/issues"

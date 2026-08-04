@@ -42,11 +42,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          # Check out the exact commit that triggered the "Build and Lint" run,
-          # not just the latest commit on the branch.
-          ref: ${{ github.event.workflow_run.head_sha }}
+          # Check out the branch (not the raw commit SHA): semantic-release needs to be on an
+          # actual branch to push its release commit and tag. A detached HEAD would make it
+          # bail out with "not running from a branch".
+          ref: ${{ github.event.workflow_run.head_branch }}
           fetch-depth: 0
-          persist-credentials: false
 
       - name: Use Node.js
         uses: actions/setup-node@v5
@@ -76,7 +76,34 @@ jobs:
       - name: Run tests
         run: npm test
 
+      # semantic-release determines the next version, updates package.json/CHANGELOG.md,
+      # creates the git tag and the GitHub release. It does NOT publish to npm itself
+      # (npmPublish is disabled in .releaserc.json), because @semantic-release/npm verifies
+      # credentials via "npm whoami", which is incompatible with Trusted Publishing (OIDC)
+      # where no token exists up front.
       - name: Release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Detect whether semantic-release actually produced a new version by checking if the
+      # version in package.json is already present on npm.
+      - name: Check whether the current version needs publishing
+        id: check
+        run: |
+          LOCAL_VERSION=$(node -p "require('./package.json').version")
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          if npm view "$PACKAGE_NAME@$LOCAL_VERSION" version >/dev/null 2>&1; then
+            echo "Version $LOCAL_VERSION is already published - nothing to do."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version $LOCAL_VERSION is not published yet."
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Publishing happens through the npm CLI so that Trusted Publishing (OIDC) is used.
+      # No NPM_TOKEN is required; npm exchanges the GitHub OIDC token for short-lived
+      # credentials and additionally attaches a provenance attestation.
+      - name: Publish to npm
+        if: steps.check.outputs.publish == 'true'
+        run: npm publish
