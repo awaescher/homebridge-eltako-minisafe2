@@ -135,13 +135,3 @@ This plugin brings inofficial HomeKit support for some Eltako devices. It is not
 Everything this plugin is able to do was reverse engineered. This way, this plugin will never support 100% of the devices and commands. Any help finding API resources is highly welcome.
 
 I wrote this plugin for fun, use it at your own risk.
-
-# Building
-
-``` bash
-npm version major/minor/patch
-npm run build
-npm publish
-git push 
-git push --tags
-```

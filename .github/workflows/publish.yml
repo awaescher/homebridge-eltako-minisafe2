@@ -1,0 +1,65 @@
+name: Release
+
+# Runs whenever commits land on the "latest" branch (e.g. after merging a pull request).
+# semantic-release analyzes the commit messages since the last release (Conventional Commits)
+# to determine whether a new version is needed and, if so, which type (patch/minor/major).
+#
+# Examples:
+#   fix: ...              -> patch release (e.g. 2.4.6 -> 2.4.7)
+#   feat: ...              -> minor release (e.g. 2.4.6 -> 2.5.0)
+#   feat!: ...             -> major release (e.g. 2.4.6 -> 3.0.0)
+#   BREAKING CHANGE: ...   -> major release (in the commit body/footer)
+#
+# If no relevant commits are found, no release is created.
+on:
+  push:
+    branches:
+      - latest
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    # "contents: write" lets semantic-release push commits/tags and create a GitHub release.
+    # "issues: write" / "pull-requests: write" let it comment on related issues/PRs.
+    # "id-token: write" is required for npm Trusted Publishing (OIDC) - no NPM_TOKEN needed.
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          registry-url: 'https://registry.npmjs.org'
+
+      # Trusted Publishing (OIDC) requires a recent npm CLI (>= 11.5.1).
+      # The npm version bundled with setup-node may be older, so we upgrade it explicitly.
+      - name: Update npm to a version supporting Trusted Publishing
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -23,7 +23,8 @@
     "watch": "npm run build && npm link && nodemon",
     "build": "rimraf ./dist && tsc",
     "test": "mocha --require ts-node/register 'src/**/*.test.ts'",
-    "prepublishOnly": "npm run lint && npm run build"
+    "prepublishOnly": "npm run lint && npm run build",
+    "release": "semantic-release"
   },
   "keywords": [
     "homebridge-plugin",
@@ -38,6 +39,8 @@
     "axios": "^1.12.2"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.6",
     "@types/node": "^18.19.130",
@@ -50,6 +53,7 @@
     "mocha": "^11.7.5",
     "nodemon": "^2.0.22",
     "rimraf": "^3.0.2",
+    "semantic-release": "^24.2.0",
     "sinon": "^21.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
