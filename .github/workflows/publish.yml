@@ -1,8 +1,13 @@
 name: Release
 
-# Runs whenever commits land on the "latest" branch (e.g. after merging a pull request).
-# semantic-release analyzes the commit messages since the last release (Conventional Commits)
-# to determine whether a new version is needed and, if so, which type (patch/minor/major).
+# Runs after the "Build and Lint" workflow has finished successfully on the "latest" branch
+# (e.g. after merging a pull request). This ensures a release is only attempted once the
+# full build/lint matrix has passed - a broken build/lint on any Node.js version blocks
+# the release.
+#
+# semantic-release then analyzes the commit messages since the last release (Conventional
+# Commits) to determine whether a new version is needed and, if so, which type
+# (patch/minor/major).
 #
 # Examples:
 #   fix: ...              -> patch release (e.g. 2.4.6 -> 2.4.7)
@@ -12,12 +17,16 @@ name: Release
 #
 # If no relevant commits are found, no release is created.
 on:
-  push:
+  workflow_run:
+    workflows: ["Build and Lint"]
+    types: [completed]
     branches:
       - latest
 
 jobs:
   release:
+    # Only run if the triggering "Build and Lint" run succeeded.
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     # "contents: write" lets semantic-release push commits/tags and create a GitHub release.
@@ -31,21 +40,29 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
+          # Check out the exact commit that triggered the "Build and Lint" run,
+          # not just the latest commit on the branch.
+          ref: ${{ github.event.workflow_run.head_sha }}
           fetch-depth: 0
           persist-credentials: false
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20.x
+          node-version: 22.x
           registry-url: 'https://registry.npmjs.org'
 
       # Trusted Publishing (OIDC) requires a recent npm CLI (>= 11.5.1).
       # The npm version bundled with setup-node may be older, so we upgrade it explicitly.
+      #
+      # We deliberately pin to the 11.x line instead of using npm@latest, because npm@12
+      # flips install-time defaults (dependency lifecycle scripts are no longer run, git and
+      # remote URL dependencies are no longer resolved). Adopting npm@12 requires reviewing
+      # and committing an explicit script allowlist first (npm approve-scripts).
       - name: Update npm to a version supporting Trusted Publishing
-        run: npm install -g npm@latest
+        run: npm install -g npm@^11
 
       - name: Install dependencies
         run: npm ci
